@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Santiago Gomez">
+    <title>How 2 Bar - Popular Brands of Liquor, Liqueurs, Wine, and Beer</title>
+    <meta name="description" content="An assortment of some brands/types of liquor, wine, beer, and liqueur.">
+    <meta name="keywords" content="red wine, white wine, rose, sparkling wine, fortified wine, beer, lager, brands, call, types, brandy, vodka, whiskey, gin, tequila, rum, liqueurs, cordial, lager, ale, scotch, bourbon, american rye, canadian, whisky, irish, honey, coffee, chocolate, fruit, herbal, floral, cream, berry, nut, flavored, flavor, honey liqueur, fruit liqueur, herbal liqueur, floral liqueur, herbal/floral liqueur, berry liqueur, cordials, berry cordial, nut liqueur, honey cordial, fruit cordial, herbal cordial, chocolate liqueur, cognac, lambic, wild ale, mild ale, brown ale, pale ale, Belgian ale, french ale, belgian/french ale, belgian and french ale, stouts and porters, cream ale, california common, baltic porter, pilsner, german porter, altbier, kölsch, kolsch, ipa, red, white, sparkling, rose, fortified, rosé, santiago gomez website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link>
+</head>
+
+<body>
+    <img class="fixbackground" src="./imgs/bartender_multiple.png">
+    <div id="menu-icon" onclick="openNav()">
+        <div class="menu-iconElement"></div>
+        <div class="menu-iconElement"></div>
+        <div class="menu-iconElement"></div>
+    </div>
+
+    <a href="javascript:void(0)" id="close-btn" onclick="closeNav()">&times;</a>
+
+    <nav id="Menu">
+        <ul>
+            <a href="index.html">
+                <li>Home - Spirits</li>
+            </a>
+            <a href="cocktails.html">
+                <li>Cocktails</li>
+            </a>
+
+            <a href="terminology.html">
+                <li>Terminology</li>
+            </a>
+            <a href="brands.html">
+                <li class="current">Popular Brands</li>
+            </a>
+            <a href="beers.html">
+                <li>Beers</li>
+            </a>
+            <a href="wine.html">
+                <li>Wine</li>
+            </a>
+        </ul>
+    </nav>
+
+    <div class=container-white>
+        <h2 class="emphasis">Popular Brands</h2>
+        <section id="brands">
+            <ul>
+                <li><button onclick="showList('wine-list', this)"><h3>Wine</h3></button></li>
+                <li><button onclick="showList('brandy-list', this)"><h3>Brandy</h3></button></li>
+                <li><button onclick="showList('vodka', this)"><h3>Vodka</h3></button></li>
+            </ul>
+            <ul>
+                <li><button onclick="showList('beer-list', this)"><h3>Beer</h3></button></li>
+                <li><button onclick="showList('whiskey-list', this)"><h3>Whiskey</h3></button></li>
+                <li><button onclick="showList('liqueur-list', this)"><h3>Liqueurs</h3></button></li>
+            </ul>
+            <ul>
+                <li><button onclick="showList('gin', this)"><h3>Gin</h3></button></li>
+                <li><button onclick="showList('tequila', this)"><h3>Tequila</h3></button></li>
+                <li><button onclick="showList('rum', this)"><h3>Rum</h3></button></li>
+            </ul>
+        </section>
+
+        <form class="drp-list">
+            <select id="wine-list" onchange="showBrand('wine-list')">
+                    <option disabled selected value>-- select an option --</option>
+                    <option value="Red">Red</option>
+                    <option value="White">White</option>
+                    <option value="Rosé">Rosé</option>
+                    <option value="Sparkling">Sparkling</option>
+                    <option value="Fortified">Fortified</option>
+                </select>
+            <select id="brandy-list" onchange="showBrand('brandy-list')">
+                    <option disabled selected value>-- select an option --</option>
+                    <option value="Brandy">Brandy</option>
+                    <option value="Cognac">Cognac</option>
+                </select>
+            <select id="beer-list" onchange="showBrand('beer-list')">
+                    <option value selected disabled>-- select an option --</option>
+                    <option value="Lambic">Lambic</option>
+                    <option value="Wild Ale">Wild Ale</option>
+                    <option value="Mild Ale">Mild Ale</option>
+                    <option value="Brown Ale">Brown Ale</option>
+                    <option value="Pale Ale">Pale Ale</option>
+                    <option value="Irish Ale">Irish Ale</option>
+                    <option value="Belgian/French Ale">Belgian/French Ale</option>
+                    <option value="Stouts & Porters">Stouts & Porters</option>
+                    <option value="Cream Ale">Cream Ale</option>
+                    <option value="California Common">California Common</option>
+                    <option value="Baltic Porter">Baltic Porter</option>
+                    <option value="Pilsner" >Pilsner</option>
+                    <option value="Altbier">Altbier</option>
+                    <option value="Kölsch">Kölsch</option>
+                </select>
+            <select id="whiskey-list" onchange="showBrand('whiskey-list')">
+                    <option disabled value selected>-- select an option --</option>
+                    <option value="Scotch">Scotch</option>
+                    <option value="Irish">Irish</option>
+                    <option value="Canadian">Canadian</option>
+                    <option value="Rye">Rye</option>
+                    <option value="Bourbon">Bourbon</option>
+                    <option value="Tennessee">Tennessee</option>
+                    <option value="Wheat And Corn">Wheat And Corn</option>
+                    <option value="Blended">Blended</option>
+                </select>
+            <select id="liqueur-list" onchange="showBrand('liqueur-list')">
+                    <option value disabled selected>-- select an option --</option>
+                    <option value="Honey">Honey</option>
+                    <option value="Coffee">Coffee</option>
+                    <option value="Chocolate">Chocolate</option>
+                    <option value="Berry">Berry</option>
+                    <option value="Cream">Cream</option>
+                    <option value="Fruit">Fruit</option>
+                    <option value="Nut">Nut</option>
+                    <option value="Herbal/Floral">Herbal/Floral</option>
+                </select>
+        </form>
+
+        <div id="brands-shown">
+            <h4 class="emphasis"></h4>
+            <!--Wine-->
+            <ul id="red-brands">
+                <li onclick="void(0)"><span>Merlot</span></li>
+                <li onclick="void(0)"><span>Pinot Noir</span></li>
+                <li onclick="void(0)"><span>Syrah/ Shiraz</span></li>
+                <li onclick="void(0)"><span>Zinfandel</span></li>
+                <li onclick="void(0)"><span>Cabernet Sauvignon</span></li>
+                <li onclick="void(0)"><span>Malbec</span></li>
+                <li onclick="void(0)"><span>Tempranillo</span></li>
+                <li onclick="void(0)"><span>Sangiovese</span></li>
+                <li onclick="void(0)"><span>Barbera</span></li>
+            </ul>
+            <ul id="white-brands">
+                <li onclick="void(0)"><span>Chardonnay</span></li>
+                <li onclick="void(0)"><span>Sauvignon Blanc</span></li>
+                <li onclick="void(0)"><span>Semillon</span></li>
+                <li onclick="void(0)"><span>Moscato</span></li>
+                <li onclick="void(0)"><span>Pinot Grigio</span></li>
+                <li onclick="void(0)"><span>Gewürztraminer</span></li>
+                <li onclick="void(0)"><span>Riesling</span></li>
+                <li onclick="void(0)"><span>Chenin Blanc</span></li>
+            </ul>
+            <ul id="rosé-brands">
+                <li onclick="void(0)"><span>Mirabeau Pure Provence Rosé</span></li>
+                <li onclick="void(0)"><span>Clos de l'Ours Grizzly</span></li>
+                <li onclick="void(0)"><span>Charles Audoin Marsannay Rosé</span></li>
+                <li onclick="void(0)"><span>Stolpman Vineyards Estate Rosé</span></li>
+                <li onclick="void(0)"><span>Clos Civonne 'Cuvée Tradition' Tibouren Rosé</span></li>
+                <li onclick="void(0)"><span>Chateau De Trinquevedel Rosé</span></li>
+                <li onclick="void(0)"><span>Graci Etna Rosato</span></li>
+                <li onclick="void(0)"><span>Bailly-Reverdy Sancerre Rosé</span></li>
+                <li onclick="void(0)"><span>Chateau D'Esclans Garrus Rosé</span></li>
+                <li onclick="void(0)"><span>Viña Stoka Teran Rosé</span></li>
+                <li onclick="void(0)"><span>Fleur De Mer Rosé</span></li>
+                <li onclick="void(0)"><span>Fossil Point Rosé</span></li>
+                <li onclick="void(0)"><span>Tenuta Della Terre Nere Etna Rosato</span></li>
+            </ul>
+            <ul id="sparkling-brands">
+                <li onclick="void(0)"><span>Mailly Brut Reserve Grand Cru</span></li>
+                <li onclick="void(0)"><span>Korbel Blanc de Noirs</span></li>
+                <li onclick="void(0)"><span>Graham Beck 2009 Blanc de Blancs</span></li>
+                <li onclick="void(0)"><span>Mumm Napa Blanc de Blancs</span></li>
+                <li onclick="void(0)"><span>Schramsberg Mirabelle</span></li>
+                <li onclick="void(0)"><span>J Cuvée 20 Brut NV</span></li>
+                <li onclick="void(0)"><span>Villa Maria Sparkling Sauvignon Blanc</span></li>
+                <li onclick="void(0)"><span>Ceretto Moscato d'Asti</span></li>
+                <li onclick="void(0)"><span>Scharffenberger Brut Excellence</span></li>
+                <li onclick="void(0)"><span>Zucchi Lambrusco di Sorbara</span></li>
+                <li onclick="void(0)"><span>Billecart-Salmon Brut Rosé</span></li>
+                <li onclick="void(0)"><span>Domaine Carneros "Le Reve"</span></li>
+                <li onclick="void(0)"><span>Champagne Krug Vintage Brut 2000</span></li>
+                <li onclick="void(0)"><span>Dom Perignon Brut 2005</span></li>
+                <li onclick="void(0)"><span>Charles Heidsieck 2006 Rose</span></li>
+                <li onclick="void(0)"><span>Graham Beck Brut Méthode Cap Classique</span></li>
+                <li onclick="void(0)"><span>JM Gobillard et Fils Millesime 2010</span></li>
+                <li onclick="void(0)"><span>Egly-Ouriet Brut Tradition Grand Cru</span></li>
+                <li onclick="void(0)"><span>Henriot Brut Souverain</span></li>
+            </ul>
+            <ul id="fortified-brands">
+                <li onclick="void(0)"><span>Commandaria Wine</span></li>
+                <li onclick="void(0)"><span>Madeira Wine</span></li>
+                <li onclick="void(0)"><span>Marsala Wine</span></li>
+                <li onclick="void(0)"><span>Mistelle</span></li>
+                <li onclick="void(0)"><span>Moscatel de Setúbal</span></li>
+                <li onclick="void(0)"><span>Port Wine</span></li>
+                <li onclick="void(0)"><span>Sherry</span></li>
+                <li onclick="void(0)"><span>Vermouth</span></li>
+                <li onclick="void(0)"><span>Vins Doux Naturels</span></li>
+            </ul>
+            <!--End Wine-->
+            <!--Brandy-->
+            <ul id="brandy-brands">
+                <li onclick="void(0)"><span>Applejack</span></li>
+                <li onclick="void(0)"><span>Asbach Uralt</span></li>
+                <li onclick="void(0)"><span>Aztec DeOro</span></li>
+                <li onclick="void(0)"><span>Brandy de Jerez</span></li>
+                <li onclick="void(0)"><span>Calvados</span></li>
+                <li onclick="void(0)"><span>Carlos I</span></li>
+                <li onclick="void(0)"><span>Carneros Alambic</span></li>
+                <li onclick="void(0)"><span>Christian Brothers</span></li>
+                <li onclick="void(0)"><span>Don Pedro</span></li>
+                <li onclick="void(0)"><span>E & J Gallo</span></li>
+                <li onclick="void(0)"><span>Fellipe II</span></li>
+                <li onclick="void(0)"><span>Framboise</span></li>
+                <li onclick="void(0)"><span>Germain-Robin</span></li>
+                <li onclick="void(0)"><span>Kirsh</span></li>
+                <li onclick="void(0)"><span>Korbel</span></li>
+                <li onclick="void(0)"><span>Metaxa</span></li>
+                <li onclick="void(0)"><span>Poire</span></li>
+                <li onclick="void(0)"><span>Presidente</span></li>
+                <li onclick="void(0)"><span>Silvovitz</span></li>
+                <li onclick="void(0)"><span>Skyy</span></li>
+                <li onclick="void(0)"><span>Stock 84</span></li>
+                <li onclick="void(0)"><span>Finlandia</span></li>
+            </ul>
+            <ul id="cognac-brands">
+                <li onclick="void(0)"><span>Alize</span></li>
+                <li onclick="void(0)"><span>Camus</span></li>
+                <li onclick="void(0)"><span>Courvoisier</span></li>
+                <li onclick="void(0)"><span>Delamain</span></li>
+                <li onclick="void(0)"><span>Hardy</span></li>
+                <li onclick="void(0)"><span>Hennessy</span></li>
+                <li onclick="void(0)"><span>Hine Cognac</span></li>
+                <li onclick="void(0)"><span>Martell</span></li>
+                <li onclick="void(0)"><span>Remy Martin</span></li>
+            </ul>
+            <!--End Brandy-->
+            <!--Vodka-->
+            <ul id="vodka-brands">
+                <li onclick="void(0)"><span>42 Below</span></li>
+                <li onclick="void(0)"><span>360 Vodka</span></li>
+                <li onclick="void(0)"><span>Absolut</span></li>
+                <li onclick="void(0)"><span>Anestasia</span></li>
+                <li onclick="void(0)"><span>Artic</span></li>
+                <li onclick="void(0)"><span>Belvedere</span></li>
+                <li onclick="void(0)"><span>Blavod</span></li>
+                <li onclick="void(0)"><span>Boru</span></li>
+                <li onclick="void(0)"><span>Chase</span></li>
+                <li onclick="void(0)"><span>Chopin</span></li>
+                <li onclick="void(0)"><span>Cîroc</span></li>
+                <li onclick="void(0)"><span>Cold River</span></li>
+                <li onclick="void(0)"><span>Crystal Head</span></li>
+                <li onclick="void(0)"><span>Danzka</span></li>
+                <li onclick="void(0)"><span>Double Cross</span></li>
+                <li onclick="void(0)"><span>Ed Hardy</span></li>
+                <li onclick="void(0)"><span>EFFEN</span></li>
+                <li onclick="void(0)"><span>Finlandia</span></li>
+                <li onclick="void(0)"><span>Fris</span></li>
+                <li onclick="void(0)"><span>Gilbey's</span></li>
+                <li onclick="void(0)"><span>Glacier</span></li>
+                <li onclick="void(0)"><span>Gordon's</span></li>
+                <li onclick="void(0)"><span>Grey Goose</span></li>
+                <li onclick="void(0)"><span>Hamptons</span></li>
+                <li onclick="void(0)"><span>Hangar One</span></li>
+                <li onclick="void(0)"><span>Iceberg Vodka</span></li>
+                <li onclick="void(0)"><span>Jewel of Russia</span></li>
+                <li onclick="void(0)"><span>Ketel One</span></li>
+                <li onclick="void(0)"><span>Kremlyovskaya</span></li>
+                <li onclick="void(0)"><span>Level Vodka</span></li>
+                <li onclick="void(0)"><span>Luksusowa</span></li>
+                <li onclick="void(0)"><span>McCormic Vodka</span></li>
+                <li onclick="void(0)"><span>Nikoli</span></li>
+                <li onclick="void(0)"><span>Pearl</span></li>
+                <li onclick="void(0)"><span>Pink</span></li>
+                <li onclick="void(0)"><span>Rain Organics</span></li>
+                <li onclick="void(0)"><span>Reyka</span></li>
+                <li onclick="void(0)"><span>Russian Standard</span></li>
+                <li onclick="void(0)"><span>Seagrams Vodka</span></li>
+                <li onclick="void(0)"><span>SKYY</span></li>
+                <li onclick="void(0)"><span>Smirnoff</span></li>
+                <li onclick="void(0)"><span>Snow Leopard</span></li>
+                <li onclick="void(0)"><span>Snow Queen</span></li>
+                <li onclick="void(0)"><span>Sobieski</span></li>
+                <li onclick="void(0)"><span>Square One</span></li>
+                <li onclick="void(0)"><span>Stolichnaya</span></li>
+                <li onclick="void(0)"><span>Svedka</span></li>
+                <li onclick="void(0)"><span>Tanqueray Sterling</span></li>
+                <li onclick="void(0)"><span>Three Olives Vodka</span></li>
+                <li onclick="void(0)"><span>Tito's Handmade Vodka</span></li>
+                <li onclick="void(0)"><span>Ultimat</span></li>
+                <li onclick="void(0)"><span>UV Vodka</span></li>
+                <li onclick="void(0)"><span>Vermont Vodka</span></li>
+                <li onclick="void(0)"><span>Vincent Van Gogh Vodka</span></li>
+                <li onclick="void(0)"><span>VOX</span></li>
+                <li onclick="void(0)"><span>Wyborowa</span></li>
+                <li onclick="void(0)"><span>Xellent</span></li>
+            </ul>
+            <!--End Vodka-->
+            <!--Gin-->
+            <ul id="gin-brands">
+                <li onclick="void(0)"><span>Bafferts</span></li>
+                <li onclick="void(0)"><span>Beefeater</span></li>
+                <li onclick="void(0)"><span>Beefeater WET</span></li>
+                <li onclick="void(0)"><span>Bluecoat</span></li>
+                <li onclick="void(0)"><span>Bols Genever</span></li>
+                <li onclick="void(0)"><span>Bombay</span></li>
+                <li onclick="void(0)"><span>Bombay Sapphire</span></li>
+                <li onclick="void(0)"><span>Boodles</span></li>
+                <li onclick="void(0)"><span>Broker's</span></li>
+                <li onclick="void(0)"><span>Bulldog</span></li>
+                <li onclick="void(0)"><span>Citadelle</span></li>
+                <li onclick="void(0)"><span>Cork Dry Gin</span></li>
+                <li onclick="void(0)"><span>Damrak</span></li>
+                <li onclick="void(0)"><span>Genevieve</span></li>
+                <li onclick="void(0)"><span>Gordon's</span></li>
+                <li onclick="void(0)"><span>G'Vine</span></li>
+                <li onclick="void(0)"><span>Hendrick's</span></li>
+                <li onclick="void(0)"><span>Magellan</span></li>
+                <li onclick="void(0)"><span>Martin Miller's</span></li>
+                <li onclick="void(0)"><span>Plymouth</span></li>
+                <li onclick="void(0)"><span>Right</span></li>
+                <li onclick="void(0)"><span>Seagram's Extra Dry</span></li>
+                <li onclick="void(0)"><span>Tanqueray</span></li>
+                <li onclick="void(0)"><span>Tanqueray No. Ten</span></li>
+            </ul>
+            <!--End Gin-->
+            <!--Tequila-->
+            <ul id="tequila-brands">
+                <li onclick="void(0)"><span>901 Tequila</span></li>
+                <li onclick="void(0)"><span>1800 Tequila</span></li>
+                <li onclick="void(0)"><span>Agavero</span></li>
+                <li onclick="void(0)"><span>Cabeza</span></li>
+                <li onclick="void(0)"><span>Cabo Wabo</span></li>
+                <li onclick="void(0)"><span>Calle 23</span></li>
+                <li onclick="void(0)"><span>Casa Dragones</span></li>
+                <li onclick="void(0)"><span>Casa Noble</span></li>
+                <li onclick="void(0)"><span>Cazadores Tequila</span></li>
+                <li onclick="void(0)"><span>Chinaco</span></li>
+                <li onclick="void(0)"><span>Corazon de Agave</span></li>
+                <li onclick="void(0)"><span>Corzo Tequila</span></li>
+                <li onclick="void(0)"><span>DeLeón Tequila</span></li>
+                <li onclick="void(0)"><span>Don Julio</span></li>
+                <li onclick="void(0)"><span>El Jimador</span></li>
+                <li onclick="void(0)"><span>El Tesoro de Don Felipe</span></li>
+                <li onclick="void(0)"><span>Espolòn</span></li>
+                <li onclick="void(0)"><span>Gran Centenario</span></li>
+                <li onclick="void(0)"><span>Herradura</span></li>
+                <li onclick="void(0)"><span>Hotel California Tequila</span></li>
+                <li onclick="void(0)"><span>Jose Cuervo</span></li>
+                <li onclick="void(0)"><span>Margaritaville Tequila</span></li>
+                <li onclick="void(0)"><span>Milagro Tequila</span></li>
+                <li onclick="void(0)"><span>Paqui</span></li>
+                <li onclick="void(0)"><span>Partida</span></li>
+                <li onclick="void(0)"><span>Patron</span></li>
+                <li onclick="void(0)"><span>Pepe Lopez</span></li>
+                <li onclick="void(0)"><span>Revolucion Tequila Extra Añejo</span></li>
+                <li onclick="void(0)"><span>Sauza</span></li>
+                <li onclick="void(0)"><span>Tapatio</span></li>
+                <li onclick="void(0)"><span>Tequila Ocho</span></li>
+                <li onclick="void(0)"><span>Tres Agaves</span></li>
+                <li onclick="void(0)"><span>Two Fingers</span></li>
+            </ul>
+            <!--End Tequila-->
+            <!--Rum-->
+            <ul id="rum-brands">
+                <li onclick="void(0)"><span>10 Cane</span></li>
+                <li onclick="void(0)"><span>Admiral Leson Spiced Rum</span></li>
+                <li onclick="void(0)"><span>Angostura</span></li>
+                <li onclick="void(0)"><span>Appleton Estate</span></li>
+                <li onclick="void(0)"><span>Bacardi</span></li>
+                <li onclick="void(0)"><span>Brinley</span></li>
+                <li onclick="void(0)"><span>Captain Morgan Spiced Rum</span></li>
+                <li onclick="void(0)"><span>Castillo</span></li>
+                <li onclick="void(0)"><span>Cavalier</span></li>
+                <li onclick="void(0)"><span>Cockspur</span></li>
+                <li onclick="void(0)"><span>Cruzan Rum</span></li>
+                <li onclick="void(0)"><span>DonQ Rums</span></li>
+                <li onclick="void(0)"><span>English Harbour</span></li>
+                <li onclick="void(0)"><span>Fernandes Vat 19 Rum</span></li>
+                <li onclick="void(0)"><span>Gosling's Black Seal Rum</span></li>
+                <li onclick="void(0)"><span>Gran Blason Añejo Especial</span></li>
+                <li onclick="void(0)"><span>Havana Club</span></li>
+                <li onclick="void(0)"><span>Matusalem</span></li>
+                <li onclick="void(0)"><span>Mount Gay Rum</span></li>
+                <li onclick="void(0)"><span>Myers's Original Dark Rum</span></li>
+                <li onclick="void(0)"><span>Ocumare</span></li>
+                <li onclick="void(0)"><span>Oronoco</span></li>
+                <li onclick="void(0)"><span>Pampero</span></li>
+                <li onclick="void(0)"><span>Pusser's</span></li>
+                <li onclick="void(0)"><span>Pyrat</span></li>
+                <li onclick="void(0)"><span>Rhum Barbancourt</span></li>
+                <li onclick="void(0)"><span>Ron Del Barrilito</span></li>
+                <li onclick="void(0)"><span>Ron Rico</span></li>
+                <li onclick="void(0)"><span>Royal Oak</span></li>
+                <li onclick="void(0)"><span>Sailor Jerry</span></li>
+                <li onclick="void(0)"><span>Sea Wynde</span></li>
+                <li onclick="void(0)"><span>Stroh</span></li>
+                <li onclick="void(0)"><span>Stubbs</span></li>
+                <li onclick="void(0)"><span>Tommy Bahama Rum</span></li>
+                <li onclick="void(0)"><span>Whaler's</span></li>
+                <li onclick="void(0)"><span>Wray & Nephew</span></li>
+                <li onclick="void(0)"><span>Zaya Rum</span></li>
+            </ul>
+            <!--End Rum-->
+            <!--Beers-->
+            <ul id="lambic-brands">
+                <li onclick="void(0)"><span>Cantillon Fou' Foune</span></li>
+                <li onclick="void(0)"><span>Cantillon Lou Pepe - Kriek</span></li>
+                <li onclick="void(0)"><span>Cantillon Lou Pepe - Framboise</span></li>
+                <li onclick="void(0)"><span>Cantillon Saint Lamvinus</span></li>
+                <li onclick="void(0)"><span>Cantillon Blåbær Lambik</span></li>
+                <li onclick="void(0)"><span>Drie Fonteinen Framboos</span></li>
+                <li onclick="void(0)"><span>Drie Fonteinen Hommage</span></li>
+                <li onclick="void(0)"><span>Allagash Coolship Red</span></li>
+                <li onclick="void(0)"><span>Cantillon Vigneronne</span></li>
+                <li onclick="void(0)"><span>Oude Quetsche Tilquin à L'Ancienne</span></li>
+                <li onclick="void(0)"><span>Cantillon Kriek 100% Lambic</span></li>
+                <li onclick="void(0)"><span>Cantillon Pinot D'Aunis</span></li>
+                <li onclick="void(0)"><span>Cantillon Rosé De Gambrinus</span></li>
+                <li onclick="void(0)"><span>Frampaars</span></li>
+                <li onclick="void(0)"><span>Cantillon Lambic Rhubarbe</span></li>
+            </ul>
+            <ul id="wild ale-brands">
+                <li onclick="void(0)"><span>Cable Car</span></li>
+                <li onclick="void(0)"><span>Hill Farmstead Sue</span></li>
+                <li onclick="void(0)"><span>Pulling Nails Blend</span></li>
+                <li onclick="void(0)"><span>Hill Farmstead Juicy</span></li>
+                <li onclick="void(0)"><span>De Garde The Peach</span></li>
+                <li onclick="void(0)"><span>Atrial Rubicite</span></li>
+                <li onclick="void(0)"><span>Beatification</span></li>
+                <li onclick="void(0)"><span>Supplication</span></li>
+                <li onclick="void(0)"><span>Consecration</span></li>
+                <li onclick="void(0)"><span>Temptation</span></li>
+                <li onclick="void(0)"><span>Sanctification</span></li>
+                <li onclick="void(0)"><span>Lolita</span></li>
+                <li onclick="void(0)"><span>Lost Abbey Duck Duck Gooze</span></li>
+                <li onclick="void(0)"><span>Sante Adairius Westly</span></li>
+                <li onclick="void(0)"><span>Hill Farmstead Clover</span></li>
+                <li onclick="void(0)"><span>Framboise de Amorosa</span></li>
+                <li onclick="void(0)"><span>Auval Ribes Nigrum (Cassis)</span></li>
+                <li onclick="void(0)"><span>Cuvee de Castleton</span></li>
+            </ul>
+            <ul id="mild ale-brands">
+                <li onclick="void(0)"><span>Ring Your Mother 1832 XXXX Mild</span></li>
+                <li onclick="void(0)"><span>Barge's Mild</span></li>
+                <li onclick="void(0)"><span>M.I.L.D.</span></li>
+                <li onclick="void(0)"><span>Victorian Ruby Mild</span></li>
+                <li onclick="void(0)"><span>Little Dog - Doggie Claws</span></li>
+                <li onclick="void(0)"><span>British Mild</span></li>
+                <li onclick="void(0)"><span>Over the Moon</span></li>
+                <li onclick="void(0)"><span>Helmsman</span></li>
+                <li onclick="void(0)"><span>Otter Mild (aka Dark)</span></li>
+                <li onclick="void(0)"><span>Chiniquy Mild Ale</span></li>
+                <li onclick="void(0)"><span>Magnum Mild</span></li>
+                <li onclick="void(0)"><span>Centurion's Ghost Ale</span></li>
+                <li onclick="void(0)"><span>Partizan Mild</span></li>
+                <li onclick="void(0)"><span>Partizan X - Ale Courage 1915</span></li>
+                <li onclick="void(0)"><span>Colonial Mayhem</span></li>
+                <li onclick="void(0)"><span>Dark Ruby Mild</span></li>
+            </ul>
+            <ul id="brown ale-brands">
+                <li onclick="void(0)"><span>Indian Brown Ale</span></li>
+                <li onclick="void(0)"><span>Coffee Bender</span></li>
+                <li onclick="void(0)"><span>Palo Santo Marron</span></li>
+                <li onclick="void(0)"><span>Picacho Pecan Pie Brown Ale</span></li>
+                <li onclick="void(0)"><span>Hazelnut Brown Nectar</span></li>
+                <li onclick="void(0)"><span>Snow Roller</span></li>
+                <li onclick="void(0)"><span>Festivity Ale</span></li>
+                <li onclick="void(0)"><span>Flashback Ale</span></li>
+                <li onclick="void(0)"><span>Cacao Bender</span></li>
+                <li onclick="void(0)"><span>Brownstone</span></li>
+                <li onclick="void(0)"><span>Sick Day</span></li>
+                <li onclick="void(0)"><span>Sweet Josie Brown Ale</span></li>
+                <li onclick="void(0)"><span>Over Ale</span></li>
+                <li onclick="void(0)"><span>Hill Farmstead George</span></li>
+                <li onclick="void(0)"><span>Prairie Okie</span></li>
+                <li onclick="void(0)"><span>Peter Brown Tribute Ale</span></li>
+            </ul>
+            <ul id="pale ale-brands">
+                <li onclick="void(0)"><span>Zombie Dust</span></li>
+                <li onclick="void(0)"><span>Alpha King</span></li>
+                <li onclick="void(0)"><span>Daisy Cutter Pale Ale</span></li>
+                <li onclick="void(0)"><span>Sierra Nevada Pale Ale</span></li>
+                <li onclick="void(0)"><span>What is Enlightenment?</span></li>
+                <li onclick="void(0)"><span>Mosaic Single Hop Pale Ale</span></li>
+                <li onclick="void(0)"><span>Mirror Pond Pale Ale</span></li>
+                <li onclick="void(0)"><span>Hill Farmstead Edward</span></li>
+                <li onclick="void(0)"><span>Goos IPA</span></li>
+                <li onclick="void(0)"><span>Blackheart</span></li>
+                <li onclick="void(0)"><span>Harpoon IPA</span></li>
+                <li onclick="void(0)"><span>Guiness Nitro IPA</span></li>
+                <li onclick="void(0)"><span>Blind Faith</span></li>
+                <li onclick="void(0)"><span>Samuel Smith's India Ale</span></li>
+                <li onclick="void(0)"><span>Shipyard Monkey Fist IPA</span></li>
+            </ul>
+            <ul id="irish ale-brands">
+                <li onclick="void(0)"><span>Brian Boru</span></li>
+                <li onclick="void(0)"><span>Hornswoggled</span></li>
+                <li onclick="void(0)"><span>Bourbon Barrel Aged Dublin Raid</span></li>
+                <li onclick="void(0)"><span>Lady Luck Imperial Red Ale</span></li>
+                <li onclick="void(0)"><span>Cúl Dorcha</span></li>
+                <li onclick="void(0)"><span>Rubicon Irish Red Ale</span></li>
+                <li onclick="void(0)"><span>Get Scrooged</span></li>
+                <li onclick="void(0)"><span>Boulevard Irish Ale</span></li>
+                <li onclick="void(0)"><span>Rust Bucket</span></li>
+                <li onclick="void(0)"><span>Doppelleu Oak Wood Red Ale</span></li>
+                <li onclick="void(0)"><span>King's Blood</span></li>
+            </ul>
+            <ul id="belgian/french ale-brands">
+                <li onclick="void(0)"><span>Hill Farmstead E.</span></li>
+                <li onclick="void(0)"><span>Orval</span></li>
+                <li onclick="void(0)"><span>Westvleteren Blond</span></li>
+                <li onclick="void(0)"><span>Allagash Confluence Ale</span></li>
+                <li onclick="void(0)"><span>Cuspid to Cuspid</span></li>
+                <li onclick="void(0)"><span>Dernière Volonté en fût de Pinot Noir</span></li>
+                <li onclick="void(0)"><span>Bruxellensis</span></li>
+                <li onclick="void(0)"><span>Extraomnes Hopbloem</span></li>
+                <li onclick="void(0)"><span>Beer Table Table Beer</span></li>
+                <li onclick="void(0)"><span>Saints Devotion</span></li>
+                <li onclick="void(0)"><span>Femme Fatale Brett</span></li>
+                <li onclick="void(0)"><span>Extraomnes Blond</span></li>
+                <li onclick="void(0)"><span>La Rulles Estivale</span></li>
+            </ul>
+            <ul id="stouts & porters ale-brands">
+                <li onclick="void(0)"><span>Hill Farmstead Everett</span></li>
+                <li onclick="void(0)"><span>Founders Porter</span></li>
+                <li onclick="void(0)"><span>Mikkeller Porter</span></li>
+                <li onclick="void(0)"><span>Mikkeller Beer Geek Breakfast</span></li>
+                <li onclick="void(0)"><span>Bell's Kalamazoo Stout</span></li>
+                <li onclick="void(0)"><span>St-Ambroise Oatmeal Stout</span></li>
+                <li onclick="void(0)"><span>Matuška Stout</span></li>
+                <li onclick="void(0)"><span>Twilight of the Idols</span></li>
+                <li onclick="void(0)"><span>King Titus</span></li>
+                <li onclick="void(0)"><span>Tres Blueberry Stout</span></li>
+                <li onclick="void(0)"><span>Moor B-Moor</span></li>
+                <li onclick="void(0)"><span>Fru Frederiksen</span></li>
+                <li onclick="void(0)"><span>Last Snow Porter</span></li>
+                <li onclick="void(0)"><span>Dieu du Ciel Péché Véniel</span></li>
+                <li onclick="void(0)"><span>Dieu du Ciel Aphrodisiaque</span></li>
+            </ul>
+            <ul id="cream ale-brands">
+                <li onclick="void(0)"><span>Spotted Cow</span></li>
+                <li onclick="void(0)"><span>Regular Coffee</span></li>
+                <li onclick="void(0)"><span>Summer Solstice</span></li>
+                <li onclick="void(0)"><span>Genesee Cream Ale</span></li>
+                <li onclick="void(0)"><span>El Murciélago</span></li>
+                <li onclick="void(0)"><span>Corn on The Bine</span></li>
+                <li onclick="void(0)"><span>C.R.E.A.M. Cream Ale With Coffee</span></li>
+                <li onclick="void(0)"><span>Primals Cream</span></li>
+                <li onclick="void(0)"><span>Cali Creamin</span></li>
+                <li onclick="void(0)"><span>Flagship Ale</span></li>
+                <li onclick="void(0)"><span>Wexford Irish Cream Ale</span></li>
+                <li onclick="void(0)"><span>Calm Before The Storm</span></li>
+            </ul>
+            <ul id="california common-brands">
+                <li onclick="void(0)"><span>Anchor Steam Beer</span></li>
+                <li onclick="void(0)"><span>Big Beer Series: East Coast</span></li>
+                <li onclick="void(0)"><span>Dampf Loc</span></li>
+                <li onclick="void(0)"><span>La Nébuleuse Stirling</span></li>
+                <li onclick="void(0)"><span>Hop Common</span></li>
+                <li onclick="void(0)"><span>Dorothy's New World Lager</span></li>
+                <li onclick="void(0)"><span>Derecho</span></li>
+                <li onclick="void(0)"><span>Element 115</span></li>
+                <li onclick="void(0)"><span>New Glory 1849 Ale</span></li>
+                <li onclick="void(0)"><span>Stalins Organ</span></li>
+                <li onclick="void(0)"><span>Summer Fusion</span></li>
+                <li onclick="void(0)"><span>St. Florian's California Common</span></li>
+                <li onclick="void(0)"><span>Virginia Common</span></li>
+                <li onclick="void(0)"><span>1888</span></li>
+                <li onclick="void(0)"><span>Columbia Common</span></li>
+            </ul>
+            <ul id="baltic porter-brands">
+                <li onclick="void(0)"><span>Gonzo Imperial Porter</span></li>
+                <li onclick="void(0)"><span>Thomas Hooker Imperial Porter</span></li>
+                <li onclick="void(0)"><span>5Beans</span></li>
+                <li onclick="void(0)"><span>Smoked Baltic Porter</span></li>
+                <li onclick="void(0)"><span>Coronado/ Cigar City Jurata</span></li>
+                <li onclick="void(0)"><span>4Beans</span></li>
+                <li onclick="void(0)"><span>Smoke</span></li>
+                <li onclick="void(0)"><span>Bourbon Barrel Aged Shipwreck Porter</span></li>
+                <li onclick="void(0)"><span>The Duck-Rabbit Baltic Porter</span></li>
+                <li onclick="void(0)"><span>1Smuttynose Baltic Porter</span></li>
+                <li onclick="void(0)"><span>Baltika #6 Porter</span></li>
+                <li onclick="void(0)"><span>Zywiec Porter</span></li>
+                <li onclick="void(0)"><span>Black Boss Porter</span></li>
+                <li onclick="void(0)"><span>Imperium Prunum</span></li>
+                <li onclick="void(0)"><span>G.C. Porter Baltique (Bourbon & Brandy)</span></li>
+                <li onclick="void(0)"><span>Imperator Bałtycki</span></li>
+                <li onclick="void(0)"><span>Põhjala Cellar Series - Öö XO</span></li>
+                <li onclick="void(0)"><span>Fear and Trembling</span></li>
+                <li onclick="void(0)"><span>Pallet 7</span></li>
+                <li onclick="void(0)"><span>Sinebrychoff Porter</span></li>
+                <li onclick="void(0)"><span>Topless Wytch</span></li>
+            </ul>
+            <ul id="pilsner-brands">
+                <li onclick="void(0)"><span>Sierra Nevada Summerfest</span></li>
+                <li onclick="void(0)"><span>Pilsner Urquell</span></li>
+                <li onclick="void(0)"><span>Samuel Adams Noble Pils</span></li>
+                <li onclick="void(0)"><span>Budweiser Budvar</span></li>
+                <li onclick="void(0)"><span>Blue Paddle Pilsener</span></li>
+                <li onclick="void(0)"><span>Prima Pils</span></li>
+                <li onclick="void(0)"><span>Heater Allen Pils</span></li>
+                <li onclick="void(0)"><span>Pivo Pils</span></li>
+                <li onclick="void(0)"><span>Warsteiner Premium German Pilsener</span></li>
+                <li onclick="void(0)"><span>Nomad</span></li>
+                <li onclick="void(0)"><span>Golden Pheasant</span></li>
+                <li onclick="void(0)"><span>Torch Pilsner</span></li>
+                <li onclick="void(0)"><span>Summit Pilsener</span></li>
+                <li onclick="void(0)"><span>The Crisp</span></li>
+                <li onclick="void(0)"><span>Scrimshaw Pilsner</span></li>
+                <li onclick="void(0)"><span>Brooklyn Pilsner</span></li>
+                <li onclick="void(0)"><span>Trumer Pils</span></li>
+                <li onclick="void(0)"><span>Krušovice Imperial</span></li>
+                <li onclick="void(0)"><span>Mama's Little Yella Pils</span></li>
+                <li onclick="void(0)"><span>Bell's Lager of The Lakes</span></li>
+            </ul>
+            <ul id="altbier-brands">
+                <li onclick="void(0)"><span>Alaskan Amber</span></li>
+                <li onclick="void(0)"><span>Scurry</span></li>
+                <li onclick="void(0)"><span>Double Bag</span></li>
+                <li onclick="void(0)"><span>Uerige Doppel Sticke</span></li>
+                <li onclick="void(0)"><span>Schumacher 1838er</span></li>
+                <li onclick="void(0)"><span>Southampton Altbier</span></li>
+                <li onclick="void(0)"><span>Uerige Altbier</span></li>
+                <li onclick="void(0)"><span>Okto Festival Ale</span></li>
+                <li onclick="void(0)"><span>Organic Münster Alt</span></li>
+                <li onclick="void(0)"><span>Sleigh'r Dark Doüble Alt Ale</span></li>
+                <li onclick="void(0)"><span>Ad Astra Ale</span></li>
+                <li onclick="void(0)"><span>Copper Altbier</span></li>
+                <li onclick="void(0)"><span>Ten Years Alt</span></li>
+                <li onclick="void(0)"><span>Ishmael</span></li>
+                <li onclick="void(0)"><span>Headwall Alt</span></li>
+                <li onclick="void(0)"><span>Schell's Schmaltz's Alt</span></li>
+                <li onclick="void(0)"><span>Balt Altbier</span></li>
+                <li onclick="void(0)"><span>Iron Works Alt</span></li>
+                <li onclick="void(0)"><span>Hoppeditz</span></li>
+                <li onclick="void(0)"><span>Grolsch Amber Ale</span></li>
+                <li onclick="void(0)"><span>Diebels Alt</span></li>
+            </ul>
+            <ul id="kölsch-brands">
+                <li onclick="void(0)"><span>California Kölsch</span></li>
+                <li onclick="void(0)"><span>Leinenkugel's Canoe Paddler</span></li>
+                <li onclick="void(0)"><span>Reissdorf Kölsch</span></li>
+                <li onclick="void(0)"><span>Gaffel Kölsch</span></li>
+                <li onclick="void(0)"><span>Harpoon Summer Beer</span></li>
+                <li onclick="void(0)"><span>Saint Arnold Fancy Lawnmower</span></li>
+                <li onclick="void(0)"><span>Schlafly Kölsch</span></li>
+                <li onclick="void(0)"><span>Saint Arnold Santo</span></li>
+                <li onclick="void(0)"><span>Früh Kölsch</span></li>
+                <li onclick="void(0)"><span>Samuel Adams East-West Kölsch</span></li>
+                <li onclick="void(0)"><span>New Holland Full Circle</span></li>
+                <li onclick="void(0)"><span>Dundee Kolsch Style Ale</span></li>
+            </ul>
+            <!--End Beers-->
+            <!--Whiskey-->
+            <ul id="irish-brands">
+                <li onclick="void(0)"><span>Bushmills</span></li>
+                <li onclick="void(0)"><span>Connemara</span></li>
+                <li onclick="void(0)"><span>Danny Boy</span></li>
+                <li onclick="void(0)"><span>Jameson Irish Whiskey</span></li>
+                <li onclick="void(0)"><span>Kilbeggan</span></li>
+                <li onclick="void(0)"><span>Knappogue Castle Irish Whiskey</span></li>
+                <li onclick="void(0)"><span>Michael Collins</span></li>
+                <li onclick="void(0)"><span>Midleton</span></li>
+                <li onclick="void(0)"><span>Paddy</span></li>
+                <li onclick="void(0)"><span>Powers</span></li>
+                <li onclick="void(0)"><span>Redbreast Irish Whiskey</span></li>
+                <li onclick="void(0)"><span>Tullamore Dew</span></li>
+                <li onclick="void(0)"><span>The Tyrconnell Irish Whiskey</span></li>
+                <li onclick="void(0)"><span>Wild Geese Irish Soldiers & Heroes</span></li>
+            </ul>
+            <ul id="scotch-brands">
+                <li onclick="void(0)"><span>Ballantine's</span></li>
+                <li onclick="void(0)"><span>Bell's</span></li>
+                <li onclick="void(0)"><span>Black & White</span></li>
+                <li onclick="void(0)"><span>Black Bottle Blended Scotch</span></li>
+                <li onclick="void(0)"><span>Chivas Regal</span></li>
+                <li onclick="void(0)"><span>Cutty Sark</span></li>
+                <li onclick="void(0)"><span>Dewar's</span></li>
+                <li onclick="void(0)"><span>The Famous Grouse</span></li>
+                <li onclick="void(0)"><span>Grant's</span></li>
+                <li onclick="void(0)"><span>Johnnie Walker</span></li>
+                <li onclick="void(0)"><span>Justerini & Brooks (J&B)</span></li>
+                <li onclick="void(0)"><span>The Last Drop</span></li>
+                <li onclick="void(0)"><span>Pinch (AKA: Dimple)</span></li>
+                <li onclick="void(0)"><span>Royal Salute</span></li>
+                <li onclick="void(0)"><span>Scottish Leader Blended Scotch Whisky</span></li>
+                <li onclick="void(0)"><span>Teacher's Highland Cream</span></li>
+                <li onclick="void(0)"><span>Vat 69</span></li>
+                <li onclick="void(0)"><span>White Horse</span></li>
+            </ul>
+            <ul id="bourbon-brands">
+                <li onclick="void(0)"><span>Baker's</span></li>
+                <li onclick="void(0)"><span>Basil Hayden's</span></li>
+                <li onclick="void(0)"><span>Blanton's Single Barrel Bourbon</span></li>
+                <li onclick="void(0)"><span>Booker's Bourbon</span></li>
+                <li onclick="void(0)"><span>Buffalo Trace Bourbon</span></li>
+                <li onclick="void(0)"><span>Bulleit Bourbon</span></li>
+                <li onclick="void(0)"><span>Distillers' Masterpiece</span></li>
+                <li onclick="void(0)"><span>Elijah Craig Bourbon</span></li>
+                <li onclick="void(0)"><span>Evan Williams Black Label Bourbon</span></li>
+                <li onclick="void(0)"><span>Evan Williams Single Barrel Bourbon</span></li>
+                <li onclick="void(0)"><span>I.W. Harper Kentucky Straight Bourbon</span></li>
+                <li onclick="void(0)"><span>Jim Beam</span></li>
+                <li onclick="void(0)"><span>Jim Beam Black</span></li>
+                <li onclick="void(0)"><span>Knob Creek</span></li>
+                <li onclick="void(0)"><span>Old Charter Kentucky Straight Bourbon</span></li>
+                <li onclick="void(0)"><span>Old Crow Bourbon</span></li>
+                <li onclick="void(0)"><span>Old Grand-Dad</span></li>
+                <li onclick="void(0)"><span>Wild Turkey</span></li>
+                <li onclick="void(0)"><span>Woodford Reserve</span></li>
+            </ul>
+            <ul id="tennessee-brands">
+                <li onclick="void(0)"><span>George Dickel Tennessee Whiskey</span></li>
+                <li onclick="void(0)"><span>Jack Daniel's Tennessee Whiskey</span></li>
+            </ul>
+            <ul id="rye-brands">
+                <li onclick="void(0)"><span>Jim Beam Rye</span></li>
+                <li onclick="void(0)"><span>Michter's Straight Rye</span></li>
+                <li onclick="void(0)"><span>Old Overholt</span></li>
+                <li onclick="void(0)"><span>Redemption Rye</span></li>
+                <li onclick="void(0)"><span>Rittenhouse</span></li>
+                <li onclick="void(0)"><span>Russell's Reserve Rye</span></li>
+                <li onclick="void(0)"><span>Templeton Rye</span></li>
+                <li onclick="void(0)"><span>Thomas H. Handy Sazerac</span></li>
+                <li onclick="void(0)"><span>Van Winkle Family Reserve</span></li>
+                <li onclick="void(0)"><span>WhistlePig Straight Rye</span></li>
+                <li onclick="void(0)"><span>Wild Turkey Rye</span></li>
+            </ul>
+            <ul id="canadian-brands">
+                <li onclick="void(0)"><span>Black Velvet</span></li>
+                <li onclick="void(0)"><span>Canadian Club</span></li>
+                <li onclick="void(0)"><span>Canadian Mist</span></li>
+                <li onclick="void(0)"><span>Crown Royal</span></li>
+                <li onclick="void(0)"><span>Crown Royal Special Reserve</span></li>
+                <li onclick="void(0)"><span>Crown Royal XR</span></li>
+                <li onclick="void(0)"><span>Seagram's VO</span></li>
+                <li onclick="void(0)"><span>Tangle Ridge</span></li>
+            </ul>
+            <ul id="blended-brands">
+                <li onclick="void(0)"><span>Barton Reserve</span></li>
+                <li onclick="void(0)"><span>Carstairs</span></li>
+                <li onclick="void(0)"><span>Fleischmann's</span></li>
+                <li onclick="void(0)"><span>Imperial</span></li>
+                <li onclick="void(0)"><span>Mattingly & Moore</span></li>
+            </ul>
+            <ul id="wheat and corn-brands">
+                <li onclick="void(0)"><span>Dixie Dew</span></li>
+                <li onclick="void(0)"><span>Georgia Moon</span></li>
+                <li onclick="void(0)"><span>J.W. Corn</span></li>
+                <li onclick="void(0)"><span>Mellow Corn</span></li>
+            </ul>
+            <!--End Whiskey-->
+            <!--Liqueurs-->
+            <ul id="coffee-brands">
+                <li onclick="void(0)"><span>Allen's Coffee Brandy</span></li>
+                <li onclick="void(0)"><span>Café Rica</span></li>
+                <li onclick="void(0)"><span>Kahlúa</span></li>
+                <li onclick="void(0)"><span>Kavalan Sweet Coffee Liqueur</span></li>
+                <li onclick="void(0)"><span>Kamora</span></li>
+                <li onclick="void(0)"><span>Sombai Liqueur Anise & Coffee</span></li>
+                <li onclick="void(0)"><span>St. George Spirits NOLA Coffee Liqueur</span></li>
+                <li onclick="void(0)"><span>Tia Maria</span></li>
+                <li onclick="void(0)"><span>Toussaint Coffee Liqueur</span></li>
+                <li onclick="void(0)"><span>Patron XO Cafe</span></li>
+            </ul>
+            <ul id="honey-brands">
+                <li onclick="void(0)"><span>Bärenjäger</span></li>
+                <li onclick="void(0)"><span>Boilo</span></li>
+                <li onclick="void(0)"><span>Drambuie</span></li>
+                <li onclick="void(0)"><span>Irish Mist</span></li>
+                <li onclick="void(0)"><span>Krupnik</span></li>
+                <li onclick="void(0)"><span>Xtabentún</span></li>
+                <li onclick="void(0)"><span>Yukon Jack</span></li>
+            </ul>
+            <ul id="chocolate-brands">
+                <li onclick="void(0)"><span>Afrikoko</span></li>
+                <li onclick="void(0)"><span>Ashanti Gold</span></li>
+                <li onclick="void(0)"><span>Bicerin Di Giandujotto</span></li>
+                <li onclick="void(0)"><span>Cadbury Cream Liqueur</span></li>
+                <li onclick="void(0)"><span>Djangoa</span></li>
+                <li onclick="void(0)"><span>Dooley's White Chocolate Cream</span></li>
+                <li onclick="void(0)"><span>Dwersteg's Organic Chocolate Cream</span></li>
+                <li onclick="void(0)"><span>Florcello Chocolate Cream</span></li>
+                <li onclick="void(0)"><span>Godiva</span></li>
+                <li onclick="void(0)"><span>Godiva White Chocolate</span></li>
+                <li onclick="void(0)"><span>Liqueur Fogg</span></li>
+                <li onclick="void(0)"><span>Mozart Black</span></li>
+                <li onclick="void(0)"><span>Mozart Gold Chocolate Cream</span></li>
+                <li onclick="void(0)"><span>Mozart White Chocolate Cream</span></li>
+                <li onclick="void(0)"><span>Royal Mint-Chocolate Liqueur</span></li>
+                <li onclick="void(0)"><span>Sabra Liqueur</span></li>
+                <li onclick="void(0)"><span>Thornton's Chocolate Liqueur</span></li>
+                <li onclick="void(0)"><span>Vana Tallin Chocolate Cream</span></li>
+                <li onclick="void(0)"><span>Vermeer Dutch Chocolate Cream</span></li>
+            </ul>
+            <ul id="berry-brands">
+                <li onclick="void(0)"><span>99 Berries</span></li>
+                <li onclick="void(0)"><span>Black Haus</span></li>
+                <li onclick="void(0)"><span>Chambord</span></li>
+                <li onclick="void(0)"><span>Crème de cassis</span></li>
+                <li onclick="void(0)"><span>Guavaberry</span></li>
+                <li onclick="void(0)"><span>Hideous</span></li>
+                <li onclick="void(0)"><span>Lakka</span></li>
+                <li onclick="void(0)"><span>Lillehammer</span></li>
+                <li onclick="void(0)"><span>Mirto</span></li>
+                <li onclick="void(0)"><span>Murtado</span></li>
+                <li onclick="void(0)"><span>XUXU</span></li>
+            </ul>
+            <ul id="cream-brands">
+                <li onclick="void(0)"><span>Advocaat</span></li>
+                <li onclick="void(0)"><span>Amarula Cream Liqueur</span></li>
+                <li onclick="void(0)"><span>Baileys Irish Cream</span></li>
+                <li onclick="void(0)"><span>Canterbury Cream</span></li>
+                <li onclick="void(0)"><span>Carolans</span></li>
+                <li onclick="void(0)"><span>Cruzan Rum Cream</span></li>
+                <li onclick="void(0)"><span>Dooley's</span></li>
+                <li onclick="void(0)"><span>Heather Cream</span></li>
+                <li onclick="void(0)"><span>Kerrygold Irish Cream Liqueur</span></li>
+                <li onclick="void(0)"><span>Ponche Crema</span></li>
+                <li onclick="void(0)"><span>Rompope</span></li>
+                <li onclick="void(0)"><span>Sangster's</span></li>
+                <li onclick="void(0)"><span>Saint Brendan's Irish Cream Liqueur</span></li>
+                <li onclick="void(0)"><span>Tequila Rose</span></li>
+                <li onclick="void(0)"><span>Vana Tallin Cream</span></li>
+                <li onclick="void(0)"><span>Vermeer Dutch Chocolate Cream Liqueur</span></li>
+                <li onclick="void(0)"><span>VOODOO Cream Liqueur</span></li>
+                <li onclick="void(0)"><span>Govida Chocolate</span></li>
+            </ul>
+            <ul id="fruit-brands">
+                <li onclick="void(0)"><span>99 Bananas</span></li>
+                <li onclick="void(0)"><span>99 Apples</span></li>
+                <li onclick="void(0)"><span>99 Oranges</span></li>
+                <li onclick="void(0)"><span>99 Blackberries</span></li>
+                <li onclick="void(0)"><span>Amarula</span></li>
+                <li onclick="void(0)"><span>Aurum</span></li>
+                <li onclick="void(0)"><span>Bajtra</span></li>
+                <li onclick="void(0)"><span>Cherry Heering</span></li>
+                <li onclick="void(0)"><span>Cointreau</span></li>
+                <li onclick="void(0)"><span>Curaçao</span></li>
+                <li onclick="void(0)"><span>Damson Gin</span></li>
+                <li onclick="void(0)"><span>Ginjinha</span></li>
+                <li onclick="void(0)"><span>Grand Marnier</span></li>
+                <li onclick="void(0)"><span>GranGala</span></li>
+                <li onclick="void(0)"><span>Guignolet</span></li>
+                <li onclick="void(0)"><span>Hesperidina</span></li>
+                <li onclick="void(0)"><span>Hpnotiq</span></li>
+                <li onclick="void(0)"><span>Jabuticaba</span></li>
+                <li onclick="void(0)"><span>Kruškovac</span></li>
+                <li onclick="void(0)"><span>Lichido</span></li>
+                <li onclick="void(0)"><span>Licor 43</span></li>
+                <li onclick="void(0)"><span>Limoncello</span></li>
+                <li onclick="void(0)"><span>Manzana Verde</span></li>
+                <li onclick="void(0)"><span>Maraschino</span></li>
+                <li onclick="void(0)"><span>Medronho</span></li>
+                <li onclick="void(0)"><span>Midori</span></li>
+                <li onclick="void(0)"><span>Noyau de Poissy</span></li>
+                <li onclick="void(0)"><span>Pama</span></li>
+                <li onclick="void(0)"><span>Passoã</span></li>
+                <li onclick="void(0)"><span>Pisang Ambon</span></li>
+                <li onclick="void(0)"><span>Pucker</span></li>
+                <li onclick="void(0)"><span>Rhythm</span></li>
+                <li onclick="void(0)"><span>Sloe Gin</span></li>
+                <li onclick="void(0)"><span>Sombai</span></li>
+                <li onclick="void(0)"><span>Sơn Tinh</span></li>
+                <li onclick="void(0)"><span>Triple Sec</span></li>
+                <li onclick="void(0)"><span>TY KU</span></li>
+                <li onclick="void(0)"><span>Umeshu</span></li>
+                <li onclick="void(0)"><span>Vișinată</span></li>
+                <li onclick="void(0)"><span>X-Rated Fusion Liqueur</span></li>
+            </ul>
+            <ul id="nut-brands">
+                <li onclick="void(0)"><span>Amaretto</span></li>
+                <li onclick="void(0)"><span>Bellota</span></li>
+                <li onclick="void(0)"><span>Castries Peanut Rum Creme</span></li>
+                <li onclick="void(0)"><span>Disaronno</span></li>
+                <li onclick="void(0)"><span>Dumante</span></li>
+                <li onclick="void(0)"><span>Dwersteg's Organic Amaretto Liqueur</span></li>
+                <li onclick="void(0)"><span>Frangelico</span></li>
+                <li onclick="void(0)"><span>Kahana Royale</span></li>
+                <li onclick="void(0)"><span>Nocello</span></li>
+                <li onclick="void(0)"><span>Nocino</span></li>
+                <li onclick="void(0)"><span>Orahovac</span></li>
+                <li onclick="void(0)"><span>Peanut Liqueur</span></li>
+                <li onclick="void(0)"><span>Peanut Lolita</span></li>
+                <li onclick="void(0)"><span>Pochteca Almond Liqueur</span></li>
+                <li onclick="void(0)"><span>Ratafia</span></li>
+                <li onclick="void(0)"><span>Rivulet</span></li>
+            </ul>
+            <ul id="herbal/floral-brands">
+                <li onclick="void(0)"><span>Aguardiente</span></li>
+                <li onclick="void(0)"><span>Allasch</span></li>
+                <li onclick="void(0)"><span>Agwa de Bolivia</span></li>
+                <li onclick="void(0)"><span>Altvater</span></li>
+                <li onclick="void(0)"><span>Amaro</span></li>
+                <li onclick="void(0)"><span>Anis</span></li>
+                <li onclick="void(0)"><span>Anisette</span></li>
+                <li onclick="void(0)"><span>Beirão</span></li>
+                <li onclick="void(0)"><span>Barrow's Intense Ginger Liqueur</span></li>
+                <li onclick="void(0)"><span>Benedictine</span></li>
+                <li onclick="void(0)"><span>Boilo</span></li>
+                <li onclick="void(0)"><span>Calisaya</span></li>
+                <li onclick="void(0)"><span>Canton</span></li>
+                <li onclick="void(0)"><span>Centerba</span></li>
+                <li onclick="void(0)"><span>Chartreuse</span></li>
+                <li onclick="void(0)"><span>Crème de menthe</span></li>
+                <li onclick="void(0)"><span>Cynar</span></li>
+                <li onclick="void(0)"><span>Danzig Goldwasser</span></li>
+                <li onclick="void(0)"><span>Everglo</span></li>
+                <li onclick="void(0)"><span>Fernet</span></li>
+                <li onclick="void(0)"><span>Galliano</span></li>
+                <li onclick="void(0)"><span>Goldschläger</span></li>
+                <li onclick="void(0)"><span>Herbsaint</span></li>
+                <li onclick="void(0)"><span>Jaan Paan Liqueur</span></li>
+                <li onclick="void(0)"><span>Jägermeister</span></li>
+                <li onclick="void(0)"><span>Killepitsch</span></li>
+                <li onclick="void(0)"><span>Krupnik</span></li>
+                <li onclick="void(0)"><span>Kümmel</span></li>
+                <li onclick="void(0)"><span>Mamajuana</span></li>
+                <li onclick="void(0)"><span>Mastica</span></li>
+                <li onclick="void(0)"><span>Mastichato</span></li>
+                <li onclick="void(0)"><span>Menta</span></li>
+                <li onclick="void(0)"><span>Metaxa</span></li>
+                <li onclick="void(0)"><span>Passione Nera</span></li>
+                <li onclick="void(0)"><span>Pastis</span></li>
+                <li onclick="void(0)"><span>Patxaran</span></li>
+                <li onclick="void(0)"><span>Ricard</span></li>
+                <li onclick="void(0)"><span>Riga Black Balsam</span></li>
+                <li onclick="void(0)"><span>Sambuca</span></li>
+                <li onclick="void(0)"><span>Sombai</span></li>
+                <li onclick="void(0)"><span>Sơn Tinh</span></li>
+                <li onclick="void(0)"><span>Strega</span></li>
+                <li onclick="void(0)"><span>Underberg</span></li>
+                <li onclick="void(0)"><span>Unicum</span></li>
+                <li onclick="void(0)"><span>Vespetrò</span></li>
+                <li onclick="void(0)"><span>Xtabentún</span></li>
+            </ul>
+            <!--End Whiskey-->
+        </div>
+    </div>
+
+    <footer class="container-black">
+        <div onclick="scrollToTop()" title="Back to top" id="topbtn">&#xFE3F;</div>
+        <ul>
+            <h6>SITE MAP</h6>
+            <li><a href="index.html">Home - Spirits</a></li>
+            <li><a href="cocktails.html">Cocktails</a></li>
+
+            <li><a href="terminology.html">Terminology</a></li>
+            <li><a href="brands.html">Popular Brands</a></li>
+            <li><a href="beers.html">Beers</a></li>
+            <li><a href="wine.html">Wine</a></li>
+        </ul>
+        <ul>
+            <h6>ABOUT</h6>
+            <li>Creator: &nbsp;<a href="http://www.gomezsantiago.com" target="_blank">Santiago Gomez</a>
+            </li>
+        </ul>
+        <ul>
+            <h6>CONTACT</h6>
+            <li><a class="fa fa-linkedin-square" href="https://www.linkedin.com/in/santiago-gomez-13b4a9115/" target="_blank"></a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

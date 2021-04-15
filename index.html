@@ -1,0 +1,182 @@
+<!--This is a sample Bartending Website-->
+<!--the max width size can be 1320px (that is what it is for youtube)-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Santiago Gomez">
+    <title>How 2 Bar - Home</title>
+    <meta name="description" content="What is Beer? What is Wine? What are Spirits? What is Whiskey? Learn the basics about Alcoholic beverages, cocktails, and the terminology used in bars.">
+    <meta name="keywords" content="spirits, liquors, tequila, rum, vodka, gin, congnac, blended whiskey, blended whisky, grain whiskey, single malt, whiskey, whisky, corn whiskey, american whiskey, reposado, blanco, white, añejo, anejo, dark rum, light rum, spiced rum, xo, vsop, vs, brandy, types of whiskey, spirits, alcohol, alcoholic beverages, malted barley, distilled, distillation, types of alcohol, types, difference between, mezcal, what is tequila, what is whiskey, what is whisky, what is rum, what is mezcal, what is gin, what is vodka, irish, canadian whiskey, canadian whisky, bourbon, american, american whiskey, american whisky, straight, straight whiskey, straight whisky, straight bourbon, rye, barley, wheat, malt, single grain, single malt, whiskey or whisky, how2bar, how 2 bar, santiago gomez">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <img class="fixbackground" src="./imgs/bartender_multiple.png">
+    <header>
+        <div id="menu-icon" onclick="openNav()">
+            <div class="menu-iconElement"></div>
+            <div class="menu-iconElement"></div>
+            <div class="menu-iconElement"></div>
+        </div>
+
+        <a href="javascript:void(0)" id="close-btn" onclick="closeNav()">&times;</a>
+
+        <nav id="Menu">
+            <ul>
+                <a href="index.html">
+                    <li class="current">Home - Spirits</li>
+                </a>
+                <a href="cocktails.html">
+                    <li>Cocktails</li>
+                </a>
+
+                <a href="terminology.html">
+                    <li>Terminology</li>
+                </a>
+                <a href="brands.html">
+                    <li>Popular Brands</li>
+                </a>
+                <a href="beers.html">
+                    <li>Beers</li>
+                </a>
+                <a href="wine.html">
+                    <li>Wine</li>
+                </a>
+            </ul>
+        </nav>
+
+        <div id="banner">
+            <h1 class="main-title">How</h1>
+            <h1 class="main-title" id="bar"><small>2</small>Bar</h1>
+            <h4 id="actioncall"><span onclick="document.getElementById('spirits-home').scrollIntoView();">Spirits</span> &nbsp;|&nbsp; <span onclick="document.getElementById('whisky').scrollIntoView();">Whisky</span></h4>
+        </div>
+    </header>
+
+    <div class="container-white">
+        <h2 id="spirits-home" class="emphasis">Spirits</h2>
+        <!--Tequila-->
+        <ul class="types" onclick="showSpirits(0)"><span class="bold">Tequila</span> <span class="arrow">&#8250;</span>
+            <li>Tequila was first produced in the 16th century and can only be made from 5 Mexican states, primarily in the area surrounding the city of Tequila and the Mexican state of Jalisco. &nbsp;All tequila is distilled from blue weber agave and must be made by law from at least 51% agave, with premium Tequila being 100% blue agave. &nbsp; </li>
+            <li>The aging of Tequila takes place in oak containers, typically used bourbon casks. &nbsp; With the exception of gold tequila, it is the duration of the aging that differentiates the different types of Tequila:
+            </li>
+            <li class="indent"><span class="emphasis">Gold</span> - typically gold tequilas are not aged and instead get their gold color from added caramel coloring and sugar. &nbsp; Some 100% agave gold tequilas are made from the combination of silver and aged tequila.</li>
+            <li class="indent"><span class="emphasis">Blanco</span> - also called silver, blanco tequila is aged for less than two months and is clear.</li>
+            <li class="indent"><span class="emphasis">Reposado</span> - this tequila is aged between two and 12 months and is a golden color.</li>
+            <li class="indent"><span class="emphasis">Añejo</span> - añejo tequila is aged between one to three years and is a brown color resembling that of whisky.</li>
+            <li class="indent"><span class="emphasis">Extra Añejo</span> - a new category introduced by the Tequila Regulatory Council in 2006 and is aged for more than three years.</li>
+        </ul>
+
+        <!--Mezcal-->
+        <ul class="types" onclick="showSpirits(1)"><span class="bold">Mezcal</span> <span class="arrow">&#8250;</span>
+            <li>Mezcal, also spelled mescal, is a Mexican spirit that is distilled from the agave plant. &nbsp;Technically speaking, tequila is a mezcal, however, mezcal can be distilled from different types of agave, not just blue weber agave like tequila, and at a minimum of 80% agave. &nbsp;Furthermore, tequila can only be made in 5 Mexican states whereas mezcal can be produced in most Mexican states, namely Oaxaca, Durango, Guanajuato, Guerrero, San Luis Potosi, Zacatecas, Tamaulipas, Michoacan, and Puebla. &nbsp;Mezcal and tequila also differ in their production process, but share the aging classifications.
+            </li>
+        </ul>
+
+        <!--Gin-->
+        <ul class="types" onclick="showSpirits(2)"><span class="bold">Gin</span> <span class="arrow">&#8250;</span>
+            <li>Gin is a flavored spirit made by distilling grains like barley, rye or corn. &nbsp; It is alcohol infused with juniper berries and a variety of other botanicals. &nbsp; These botanicals can include a wide array of herbs, vegetables, flowers, fruits, spices and even tea.
+            </li>
+        </ul>
+
+        <!--Vodka-->
+        <ul class="types" onclick="showSpirits(3)"><span class="bold">Vodka</span> <span class="arrow">&#8250;</span>
+            <li>Vodka can be made anywhere in the world and is traditionally made from potatoes, corn or grains, but it can also be made from a wide range of bases like grapes and maple syrup. &nbsp; There is no universal rule that dictates how the spirit should be produced, but the final product should be colorless, odorless and tasteless, although a number of distillers do leave some flavor.</li>
+        </ul>
+
+        <!--Rum-->
+        <ul class="types" onclick="showSpirits(4)"><span class="bold">Rum</span> <span class="arrow">&#8250;</span>
+            <li>Rum is distilled from sugar cane, or more specifically from its byproduct molasses or sugar cane juice, and water. &nbsp;Like vodka, rum can be produced anywhere in the world, but the majority comes from the Caribbean and Latin America. &nbsp;There are two main types of Rum: light rum and dark rum. &nbsp; However, there is also spiced rum and golden rum.</li>
+            <li class="indent"><span class="emphasis">Light</span> - also called silver or white, is aged in oak barrels for a year or more and then filtered, with charcoal, to remove any color picked up from the barrel.</li>
+            <li class="indent"><span class="emphasis">Golden</span> - aged for several years in oak barrels, golden rum is midway between light and dark rum. &nbsp; The longer time spent aging gives the rum more color and flavor from the wood.</li>
+            <li class="indent"><span class="emphasis">Dark</span> - often aged the longest, dark rums, as the name suggests, are darker than golden rums. &nbsp; Sometimes added caramel is what gives dark rum its rich and heavier style and not a longer aging process. &nbsp; They are usually aged in heavily charred barrels which results in a stronger flavor than that of its lighter counterparts.</li>
+            <li class="indent"><span class="emphasis">Spiced</span> - can be light, golden, or dark rums. &nbsp; Spiced rums gain their flavor from vanilla, spices, or artificial flavors. &nbsp;Some of the spices added include cinnamon, rosemary, aniseed, or pepper.</li>
+        </ul>
+
+        <!--Brandy-->
+        <ul class="types" onclick="showSpirits(5)"><span class="bold">Brandy</span> <span class="arrow">&#8250;</span>
+            <li>Brandy is a spirit produced by distilling wine and it usually contains 35% to 60% alcohol by volume. &nbsp;<i>Brandy</i> also refers to eaux-de-vie or liquors obtained form the wines of other fruits like apples, cherries, plums, and pears. &nbsp;Pomace brandy is also quite common and is distilled from pomace, the skin, stems, and seeds, that are left over from winemaking. &nbsp;</li>
+            <li>Brandy is normally rated by how long it has been aged, which usually occurs in wooden casks. &nbsp; Aging can also be imitated with the addition of caramel coloring. &nbsp;The ratings vary by country and is generally unregulated in the US, however the most common ratings are:</li>
+            <li class="indent"><span class="emphasis">3 star or VS</span> - Very Special brandy is aged for at least 2 years, this younger type of brandy is what is usually mixed into cocktails.</li>
+            <li class="indent"><span class="emphasis">VSOP</span> - Very Special Old Pale is aged for at least four or five years.</li>
+            <li class="indent"><span class="emphasis">XO</span> - Extra Old brandy is aged for six and a half years or more.</li>
+            <li class="indent"><span class="emphasis">Hors d’age or Vintage</span> - are aged for the longest, more than ten years. &nbsp; Vintage brandies will have the year of harvest on the bottle while hors d'age will not. &nbsp;</li>
+        </ul>
+
+        <!--Cognac-->
+        <ul class="types" onclick="showSpirits(6)"><span class="bold">Cognac</span> <span class="arrow">&#8250;</span>
+            <li>Cognac is the most famous variety of brandy and it must be produced in the Cognac region of France. &nbsp;It is double distilled using copper pot stills which produces a colorless alcohol called eau-de-vie (literally water of life). &nbsp; Cognac, being a variety of brandy, follows the same general categories of VS, VSOP, and XO.</li>
+        </ul>
+    </div>
+
+    <article class="container-black">
+        <h2 class="emphasis" id="whisky">Whisk(e)y</h2>
+        <section class="indent">
+            <p>Whisk(e)y is spelled with the <i>e</i> (whiskey) if it is from Ireland or the US and is spelled without the <i>e</i> (whisky) if it is made elsewhere. &nbsp; Whiskey, or whisky, is alcohol distilled to a minimum of 40% and maximum of 94.8% alchohol by volume (ABV) and largely from fermented grain mash, which is a base mixture of grain and water. &nbsp;Whiskey is typically aged in casks made of charred white oak with different grains like barley, corn, rye, and wheat being used for different whiskey varieties. &nbsp;The type of whiskey can be distinguished by its country of origin and the type of grain used in the distillation process. &nbsp;The types of whiskey include, but are not limited to, rye whiskey, bourbon whiskey, scotch whisky, Irish whiskey, and Canadian whisky. &nbsp;Types of whiskey can also be categorized as being malt, grain, corn, or blended.</p>
+            <br/>
+            <h3>Scotch</h3>
+            <p>Scotch whisky is whisky made entirely in Scotland and must be made from water and malted barley, but whole grains of other cereals may also be added. &nbsp;The malted barley is often dried over peat smoke, which gives scotch its smoky flavor. &nbsp;Scotch must also be aged in oak casks for at least three years and one day in Scotland and is generally distilled twice in pot stills, but a few are distilled three times. &nbsp;</p>
+            <br/>
+            <h3>Irish</h3>
+            <p>Irish whiskey is typically distilled three times and must be produced in Ireland and be aged for at least three years in wooden casks. &nbsp;Similar to scotch, Irish whiskey must include malted barley and may include other unmalted cereal grains. &nbsp;Furthermore, Irish whiskey is often made from kiln-dried barley, which gives it a smoother taste than the smoky overtones that are common in some scotches. &nbsp; </p>
+            <br/>
+            <h3>Canadian</h3>
+            <p>Canadian whisky is often referred to as rye whisky, even though there are no requirements for rye to be used in the distillation process. &nbsp;Canadians use a variety of mash bills, a combination of grains in different proportions, and most of their whiskies are blended after maturation with multi-grain liquors that contain a large percentage of corn spirits. &nbsp;historicaly, highly flavored rye grain was added to the mash and people began calling this new style of rye-flavored whisky as rye in order to distinguish it from other whiskeys like bourbon. &nbsp;Today, Canadian law requires that whisky labeled as <i>Canadian Whisky</i>, <i>Canadian Rye Whisky</i>, or <i>Rye Whisky</i> be aged for at least three years in Canada and any spirit used in the making of Canadian whisky must be aged in wooden barrels, used or new, with a capacity of 700L or less.</p>
+            <br/>
+            <h3>Bourbon & American</h3>
+            <p>Bourbon is an American whiskey distilled from a mash that is at least 51% corn and its name comes from the geographic area known as Old Bourbon in Kentucky. &nbsp;As an American whiskey, it must be aged in new charred oak barrels and must be distilled to a maximum of 80% ABV (160 proof). &nbsp;Other American whiskeys include rye, rye malt, malt, wheat, corn, and Tennessee whiskey, which has almost identical requirements to bourbon, but must be made in Tennessee and be charcoal-filtered before it is filled into casks. &nbsp;<strong>Straight bourbon</strong> must be aged in the new oak barrels for at least two years and be made from a single batch. &nbsp;It must be unblended and, essentially, be <i>straight</i> from the barrel.</p>
+            <br/>
+            <h3>Rye</h3>
+            <p>Rye whiskey can refer to either American rye whiskey or Canadian whisky. &nbsp; American rye whiskey contains at least 51% rye and must be aged in oak casks for at least two years. &nbsp;Since American law calls for several requirements in order to label a product as rye whiskey, the vast majority of Canadian rye whiskies cannot be sold in the United States as rye whisky.</p>
+            <br/>
+            <h3>Corn</h3>
+            <p>Corn whiskey is an American liquor produced from mash that is no less than 80% corn. &nbsp; Unlike other American whiskeys, corn whiskey does not need to be aged. &nbsp; If it is aged, it's typically for 6 months or less and it must be in used or uncharred oak barrels.</p>
+            <br/>
+            <h3>Malt</h3>
+            <p>Malt whisky is made predominantly in Scotland and from mash primarily consisting of a malted grain, presumably barley. &nbsp;It is distilled twice in pot stills and can be called <strong>single malt whisky</strong> if produced exclusively at a single distillery that only used a single malted grain. &nbsp;Furthermore, in Scotland or Ireland, for a whisky to be considered malt whisky, it must be made from mash consisting of 100% malted barley.</p>
+            <br/>
+            <h3>Grain</h3>
+            <p>Grain whiskey is made mainly from corn and barley, but can also contain wheat or rye and not include barley. &nbsp;Similar to single malt whisky, <strong>single-grain whiskies</strong> are made from a single distillery, but with the addition of other cereal grains, typically wheat, corn or a blend, instead of just malted barley.</p>
+            <br/>
+            <h3>Blended</h3>
+            <p>Blended whisky, or blended whiskey, is made by combining different types of whiskies from different distilleries. &nbsp;Typically, blended whisky contains a blend of barrel aged malt whisky and grain whiskies. &nbsp; However, there are also <strong>blended malt whisky</strong> and <strong>blended grain whisky</strong>, which is the combination of single malt whiskies and single grain whiskies, respectively, from different distilleries.</p>
+
+        </section>
+    </article>
+
+    <footer class="container-black">
+        <div onclick="scrollToTop()" title="back to top" id="topbtn">&#xFE3F;</div>
+        <ul>
+            <h6>SITE MAP</h6>
+            <li><a href="index.html">Home - Spirits</a></li>
+            <li><a href="cocktails.html">Cocktails</a></li>
+
+            <li><a href="terminology.html">Terminology</a></li>
+            <li><a href="brands.html">Popular Brands</a></li>
+            <li><a href="beers.html">Beers</a></li>
+            <li><a href="wine.html">Wine</a></li>
+        </ul>
+        <ul>
+            <h6>ABOUT</h6>
+            <li>Creator: &nbsp;<a href="http://www.gomezsantiago.com" target="_blank">Santiago Gomez</a>
+            </li>
+        </ul>
+        <ul>
+            <h6>CONTACT</h6>
+            <li><a class="fa fa-linkedin-square" href="https://www.linkedin.com/in/santiago-gomez-13b4a9115/" target="_blank"></a>
+            </li>
+        </ul>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

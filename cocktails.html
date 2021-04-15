@@ -1,0 +1,703 @@
+<!--Sample spirits section-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Santiago Gomez">
+    <title>How 2 Bar - Popular Cocktails</title>
+    <meta name="description" content="cocktail recipes for different base spirits like tequila, brandy, vodka, gin, rum, whiskey, wine, and liqueurs.">
+    <meta name="keywords" content="cocktail recipes, tequila, rum, whiskey, whisky, wine, gin, congnac, champagne, preseco, bartending, beer, how, how to, cocktail ingredients, old fashioned, mojito, martini, 007, agent 007, angel face, aviation, classic, manhattan, dirty, dry, wet, perfect, vesper, perfect martini, dirty martini, wet martini, gimlet, chimayo, chimayó, long island iced tea, garnish, lime wheel, lime, margarita, matador, paloma, tequila slammer, tequila sour, tequila sunrise, tequila sunset, negroni, singapore sling, tom collins, collins, vesper, appletini, bacardi, bay breeze, sea breeze, black russian, bloody mary, cape cod, cape codder, flirtini, cosmo, cosmopolitan, greyhound, hairy navel, harvey wallbanger, kamikaze, madras, equal parts, part, one part, melon ball, moscow mule, salty dog, screwdriver, sex on the beach, smith & wesson, vodka martini, white russian, between the sheets, cuba libre, daiquiri, hemingway special, mai tai, mojito, pina colada, piña colada, brandy alexander, irish buck, irish coffee, horse's neck, sidecar, jack and coke, john collins, popular drinks, famous drinks, common drinks, common cocktails, lynchburg lemonade, mint julep, rob roy, 7 and 7, seven and seven, amaretto sour, americano, bellini, black and tan, capipirinha, french connection, god father, god mother, golden dream, grasshopper, pimm's cup, smith and kearns, black, tan, french 75, champagne cocktail, kir, mimosa, rose, arnold palmer, shirley temple, mocktail, virgin, santiago gomez">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <img class="fixbackground" src="./imgs/bartender_multiple.png">
+    <div id="menu-icon" onclick="openNav()">
+        <div class="menu-iconElement"></div>
+        <div class="menu-iconElement"></div>
+        <div class="menu-iconElement"></div>
+    </div>
+
+    <a href="javascript:void(0)" id="close-btn" onclick="closeNav()">&times;</a>
+
+    <nav id="Menu">
+        <ul>
+            <a href="index.html">
+                <li>Home - Spirits</li>
+            </a>
+            <a href="cocktails.html">
+                <li class="current">Cocktails</li>
+            </a>
+
+            <a href="terminology.html">
+                <li>Terminology</li>
+            </a>
+            <a href="brands.html">
+                <li>Popular Brands</li>
+            </a>
+            <a href="beers.html">
+                <li>Beers</li>
+            </a>
+            <a href="wine.html">
+                <li>Wine</li>
+            </a>
+        </ul>
+    </nav>
+
+    <div class="container-white" id="cocktails-container">
+        <h2 class="emphasis">Cocktails</h2>
+
+        <!--Tequila-->
+        <div class="cocktail-left">
+            <h3 class="cocktails-title">Tequila</h3>
+            <ul class="types-slider"><span class="arrow-slider" onclick="prevImg(0)">&#8249;</span>
+                <li>
+                    <h5>Chimayó</h5><img src="imgs/cocktails/glass_rock.png" alt="Chimayó">
+                    <p class="cocktail-recipe cocktail-tequila">
+                        &rarr; Garnish: Apple Slice<br/> &rarr; &frac14; oz. Lemon Juice<br/> &rarr; &frac14; oz. Creme De Cassis<br/> &rarr; 1 oz. Apple Cider<br/> &rarr; 1.5 oz. Tequila<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Juan Collins</h5><img src="imgs/cocktails/glass_highball.png" alt="juan-collins">
+                    <p class="cocktail-recipe cocktail-tequila">
+                        &rarr; Garnish: Lime Wedge<br/> &rarr; 1 oz. Lemon Juice<br/> &rarr; &frac12; oz. Agave Nectar<br/> &rarr; 1.5 oz. Tequila<br/> &rarr; Club Soda<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Long Island Iced Tea</h5><img src="imgs/cocktails/glass_highball.png" alt="long-island-iced-tea">
+                    <p class="cocktail-recipe cocktail-tequila">
+                        &rarr; Garnish: Lemon Wedge<br/> &rarr; 1 oz. Lemon Juice<br/> &rarr; 1 oz. Gomme Syrup<br/> &rarr; &frac12; oz. Triple Sec<br/> &rarr; &frac12; oz. Silver Tequila<br/> &rarr; &frac12; oz. Gin<br/> &rarr; &frac12; oz. White Rum<br/> &rarr; &frac12; oz. Vodka<br/> &rarr; Cola<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Margarita</h5><img src="imgs/cocktails/glass_margarita.png" alt="margarita">
+                    <p class="cocktail-recipe cocktail-tequila">&rarr; Salt Coated Rim<br/> &rarr; Garnish: Lime Wedge<br/> &rarr; &frac34; oz. Fresh Lime Juice<br/> &rarr; 1 oz. Orange Liqueur<br/> &rarr; 2 oz. Tequila<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Matador</h5><img src="imgs/cocktails/glass_highball.png" alt="matador">
+                    <p class="cocktail-recipe cocktail-tequila">&rarr; Garnish: Lime Slice or Twist<br/> &rarr; &frac12; oz. Lime Juice<br/> &rarr; 3 oz. Pineapple Juice<br/> &rarr; 1.5 oz. Silver Tequila<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Paloma</h5><img src="imgs/cocktails/glass_highball.png" alt="paloma">
+                    <p class="cocktail-recipe cocktail-tequila">&rarr; Salt Coated Rim<br/> &rarr; Garnish: Grapefruit Wedge<br/> &rarr; &frac12; oz. Fresh Lime Juice<br/> &rarr; 1 tsp. Sugar<br/> &rarr; 2 oz. Mezcal or Tequila<br/> &rarr; Grapefruit Soda<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Tequila Slammer</h5><img src="imgs/cocktails/glass_rock.png" alt="tequila-slammer">
+                    <p class="cocktail-recipe cocktail-tequila">
+                        &rarr; One Part Tequila<br/> &rarr; One Part Ginger Ale<br/> &rarr; Glassware: Rocks<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Tequila Sour</h5><img src="imgs/cocktails/glass_rock.png" alt="tequila-sour">
+                    <p class="cocktail-recipe cocktail-tequila">
+                        &rarr; Garnish: Cherry or Lemon<br/> &rarr; &frac34; oz. Lemon Juice<br/> &rarr; &frac34; oz. Simple Syrup<br/> &rarr; 2 oz. Tequila<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Tequila Sunrise</h5><img src="imgs/cocktails/glass_highball.png" alt="tequila-sunrise">
+                    <p class="cocktail-recipe cocktail-tequila">
+                        &rarr; Garnish: Orange & Cherry<br/> &rarr; 3 oz. Orange Juice<br/> &rarr; 1.5 oz. Tequila<br/> &rarr; &frac12; oz. Grenadine Syrup<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Tequila Sunset</h5><img src="imgs/cocktails/glass_highball.png" alt="tequila-sunset">
+                    <p class="cocktail-recipe cocktail-tequila">
+                        &rarr; Garnish: Orange & Cherry<br/> &rarr; 3 oz. Orange Juice<br/> &rarr; 1.5 oz. Tequila<br/> &rarr; &frac12; oz. Blackberry Brandy<br/>
+                    </p>
+                </li>
+                <span class="arrow-slider" onclick="nextImg(0)">&#8250;</span>
+            </ul>
+        </div>
+
+        <!--Gin-->
+        <div class="cocktail-right">
+            <h3 class="cocktails-title">Gin</h3>
+            <ul class="types-slider"><span class="arrow-slider" onclick="prevImg(1)">&#8249;</span>
+                <li>
+                    <h5>Angel Face</h5><img src="imgs/cocktails/glass_martini.png" alt="angel-face">
+                    <p class="cocktail-recipe cocktail-gin">
+                        &rarr; 1 oz. Calvados<br/> &rarr; 1 oz. Apricot Brandy<br/> &rarr; 1 oz. Dry Gin<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Aviation</h5><img src="imgs/cocktails/glass_martini.png" alt="angel-face">
+                    <p class="cocktail-recipe cocktail-gin">
+                        &rarr; Garnish: Cherry<br/> &rarr; &frac12; oz. Crème de violette<br/>&emsp; or Crème Yvetter<br/> &rarr; &frac12; oz. Maraschino Liqueur<br/> &rarr; &frac12; oz. Lemon Juice<br/> &rarr; 1.5 oz. Gin<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Classic Martini</h5><img src="imgs/cocktails/glass_martini.png" alt="classic-martini">
+                    <p class="cocktail-recipe cocktail-gin">
+                        &rarr; Garnish: 1 or 3 Olives<br/> &rarr; &frac12; oz. Dry Vermouth<br/> &rarr; 3 oz. Gin<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Dirty Martini</h5><img src="imgs/cocktails/glass_martini.png" alt="dirty-martini">
+                    <p class="cocktail-recipe cocktail-gin">
+                        &rarr; Garnish: 1 or 3 Olives<br/> &rarr; &frac12; oz. Dry Vermouth<br/> &rarr; &frac12; oz. Olive Brine<br/> &rarr; 2.5 oz. Gin<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Dry Martini</h5><img src="imgs/cocktails/glass_martini.png" alt="dry-martini">
+                    <p class="cocktail-recipe cocktail-gin">
+                        &rarr; Garnish: 1 or 3 Olives<br/> &rarr; Very Little Vermouth<br/> &rarr; &frac12; oz. Olive Brine<br/> &rarr; 2.5 oz. Gin<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Wet Martini</h5><img src="imgs/cocktails/glass_martini.png" alt="wet-martini">
+                    <p class="cocktail-recipe cocktail-gin">
+                        &rarr; Garnish: 1 or 3 Olives<br/> &rarr; 1 oz. Dry Vermouth<br/> &rarr; 2.5 oz. Gin<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Gimlet</h5><img src="imgs/cocktails/glass_margarita.png" alt="gimlet">
+                    <p class="cocktail-recipe cocktail-gin">
+                        &rarr; Garnish: Lime Wheel<br/> &rarr; &frac12; oz. Lime Juice<br/> &rarr; &frac12; oz. Simple Syrup<br/> &rarr; 2.5 oz. Gin<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Long Island Iced Tea</h5><img src="imgs/cocktails/glass_highball.png" alt="long-island-iced-tea">
+                    <p class="cocktail-recipe cocktail-gin">
+                        &rarr; Garnish: Lemon Wedge<br/> &rarr; 1 oz. Lemon Juice<br/> &rarr; 1 oz. Gomme Syrup<br/> &rarr; &frac12; oz. Triple Sec<br/> &rarr; &frac12; oz. Silver Tequila<br/> &rarr; &frac12; oz. Gin<br/> &rarr; &frac12; oz. White Rum<br/> &rarr; &frac12; oz. Vodka<br/> &rarr; Cola<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Negroni</h5><img src="imgs/cocktails/glass_rock.png" alt="Negroni">
+                    <p class="cocktail-recipe cocktail-gin">
+                        &rarr; Garnish: Orange Peel<br/> &rarr; 1 Part Sweet Vermouth<br/> &rarr; 1 Part Gin<br/> &rarr; 1 Part Campari<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Singapore Sling</h5><img src="imgs/cocktails/glass_tropical.png" alt="singapore-sling">
+                    <p class="cocktail-recipe cocktail-gin">
+                        &rarr; Garnish: Cherry &<br/>&emsp; Pineapple Slice<br/> &rarr; Dash Angostura Bitters<br/> &rarr; 4 oz. Pineapple Juice<br/> &rarr; &frac12; oz. Lime Juice<br/> &rarr; 1&frasl;3 oz. Grenadine<br/> &rarr; &frac14; oz. DOM Bénédictine<br/> &rarr; &frac14; oz. Cointreau<br/> &rarr; &frac12; oz. Cherry Liqueur<br/> &rarr; 1 oz. Gin<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Tom Collins</h5><img src="imgs/cocktails/glass_highball.png" alt="tom-collins">
+                    <p class="cocktail-recipe cocktail-gin">
+                        &rarr; Garnish: Cherry<br/>&emsp; & Lemon Slice<br/> &rarr; 1 oz. Lemon Juice<br/> &rarr; &frac12; oz. Simple Syrup<br/> &rarr; Club Soda<br/> &rarr; 1.5 oz. Gin<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Vesper</h5><img src="imgs/cocktails/glass_martini.png" alt="vesper">
+                    <p class="cocktail-recipe cocktail-gin">
+                        &rarr; Garnish: Lemon Twist<br/> &rarr; &frac14; oz. Lillet Blanc<br/> &rarr; &frac12; oz. Vodka<br/> &rarr; 2 oz. Gin<br/>
+                    </p>
+                </li>
+                <span class="arrow-slider" onclick="nextImg(1)">&#8250;</span>
+            </ul>
+        </div>
+
+
+        <!--Vodka-->
+        <div class="cocktail-left">
+            <h3 class="cocktails-title">Vodka</h3>
+            <ul class="types-slider"><span class="arrow-slider" onclick="prevImg(2)">&#8249;</span>
+                <li>
+                    <h5>Appletini</h5><img src="imgs/cocktails/glass_martini.png" alt="appletini">
+                    <p class="cocktail-recipe cocktail-vodka">
+                        &rarr; Garnish: Apple Slice<br/> &rarr; &frac12; oz. Apple Schnapps<br/> &rarr; &frac12; oz. Cointreau<br/> &rarr; 1.5 oz. Vodka<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Bay Breeze</h5><img src="imgs/cocktails/glass_highball.png" alt="bay-breeze">
+                    <p class="cocktail-recipe cocktail-vodka">
+                        &rarr; Garnish: Lime Wedge<br/> &rarr; 2 oz. Cranberry Juice<br/> &rarr; 2 oz. Pineapple Juice<br/> &rarr; 1.5 oz. Vodka<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Black Russian</h5><img src="imgs/cocktails/glass_rock.png" alt="black-russian">
+                    <p class="cocktail-recipe cocktail-vodka">
+                        &rarr; Garnish: None<br/> &rarr; 2&frasl;3 oz. Coffee Liqueur<br/> &rarr; 1 2&frasl;3 oz. Vodka<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Bloody Mary</h5><img src="imgs/cocktails/glass_highball.png" alt="bloody-mary">
+                    <p class="cocktail-recipe cocktail-vodka" id="bloodyMary">
+                        &rarr; Garnish: Celery Stalk<br/>&emsp; & Lime Wedge<br/> &rarr; 2 Dashes Tabasco Sauce<br/> &rarr; Ground Black Pepper<br/> &rarr; 2 tsp. Horseradish<br/> &rarr; Worcestershire Sauce<br/> &rarr; &frac12; oz. Lemon Juice<br/> &rarr; 3 oz. Tomatoe Juice<br/> &rarr; 1.5 oz. Vodka<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Cape Codder</h5><img src="imgs/cocktails/glass_highball.png" alt="cape-codder">
+                    <p class="cocktail-recipe cocktail-vodka">
+                        &rarr; Garnish: Lime Wedge<br/> &rarr; 1-4 Parts Cranberry Juice<br/> &rarr; 1 Part Vodka<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Cosmopolitan</h5><img src="imgs/cocktails/glass_martini.png" alt="cosmopolitan">
+                    <p class="cocktail-recipe cocktail-vodka">
+                        &rarr; Garnish: Lime Wedge<br/> &rarr; &frac12; oz. Fresh Lime Juice<br/> &rarr; &frac12; oz. Cointreau<br/> &rarr; 1 oz. Cranberry Juice<br/> &rarr; 1.5 oz. Vodka<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Flirtini</h5><img src="imgs/cocktails/glass_martini.png" alt="flirtini">
+                    <p class="cocktail-recipe cocktail-vodka">
+                        &rarr; Garnish: Cherry &<br/>&emsp; Pineapple Wedge<br/> &rarr; Top with Champagne<br/> &rarr; 1 oz. Pineapple Juice<br/> &rarr; &frac12; oz. Orange Liqueur<br/> &rarr; &frac12; oz. Vodka<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Greyhound</h5><img src="imgs/cocktails/glass_highball.png" alt="greyhound">
+                    <p class="cocktail-recipe cocktail-vodka">
+                        &rarr; Garnish: Lime Wedge<br/> &rarr; 1-4 Parts Grapefruit Juice<br/> &rarr; 1 Part Vodka<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Hairy Navel</h5><img src="imgs/cocktails/glass_highball.png" alt="hairy-navel">
+                    <p class="cocktail-recipe cocktail-vodka">
+                        &rarr; Garnish: Orange Slice<br/> &rarr; Orange Juice<br/> &rarr; 1 oz. Peach Schnapps<br/> &rarr; 1 oz. Vodka<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Harvey Wallbanger</h5><img src="imgs/cocktails/glass_highball.png" alt="harvey-wallbanger">
+                    <p class="cocktail-recipe cocktail-vodka">
+                        &rarr; Garnish: Cherry<br/>&emsp; & Orange Slice<br/> &rarr; Orange Juice<br/> &rarr; &frac12; oz. Galliano L'Autentico<br/> &rarr; 1.5 oz. Vodka<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Kamikaze</h5><img src="imgs/cocktails/glass_martini.png" alt="kamikaze">
+                    <p class="cocktail-recipe cocktail-vodka">
+                        &rarr; Garnish: Lime Wedge<br/> &rarr; 1 Part Lime Juice<br/> &rarr; 1 Part Triple Sec<br/> &rarr; 1 Part Vodka<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Long Island Iced Tea</h5><img src="imgs/cocktails/glass_highball.png" alt="long-island-iced-tea">
+                    <p class="cocktail-recipe cocktail-vodka">
+                        &rarr; Garnish: Lemon Wedge<br/> &rarr; 1 oz. Lemon Juice<br/> &rarr; 1 oz. Gomme Syrup<br/> &rarr; &frac12; oz. Triple Sec<br/> &rarr; &frac12; oz. Silver Tequila<br/> &rarr; &frac12; oz. Gin<br/> &rarr; &frac12; oz. White Rum<br/> &rarr; &frac12; oz. Vodka<br/> &rarr; Cola<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Madras</h5><img src="imgs/cocktails/glass_highball.png" alt="madras">
+                    <p class="cocktail-recipe cocktail-vodka">
+                        &rarr; Garnish: Lime Wedge<br/> &rarr; 2 oz. Cranberry Juice<br/> &rarr; 2 oz. Orange Juice<br/> &rarr; 1.5 oz. Vodka<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Melon Ball</h5><img src="imgs/cocktails/glass_highball.png" alt="melon-ball">
+                    <p class="cocktail-recipe cocktail-vodka">
+                        &rarr; Garnish: Melon Balls<br/> &rarr; Pineapple Juice<br/> &rarr; 1 oz. Melon Liqueur<br/> &rarr; 1 oz. Vodka<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Moscow Mule</h5><img src="imgs/cocktails/glass_highball.png" alt="moscow-mule">
+                    <p class="cocktail-recipe cocktail-vodka">
+                        &rarr; Garnish: Lime Wedge<br/> &rarr; 4 oz. Ginger Beer<br/> &rarr; &frac12; oz. Lime Juice<br/> &rarr; 1.5 oz. Vodka<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Salty Dog</h5><img src="imgs/cocktails/glass_highball.png" alt="salty-dog">
+                    <p class="cocktail-recipe cocktail-vodka">
+                        &rarr; Garnish: Salted Rim<br/> &rarr; 3 oz. Grapefruit Juice<br/> &rarr; 1.5 oz. Vodka or Gin<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Screwdriver</h5><img src="imgs/cocktails/glass_highball.png" alt="screwdriver">
+                    <p class="cocktail-recipe cocktail-vodka">
+                        &rarr; Garnish: Orange Slice<br/> &rarr; 1-4 Parts Orange Juice<br/> &rarr; 1 Part Vodka<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Sea Breeze</h5><img src="imgs/cocktails/glass_highball.png" alt="sea-breeze">
+                    <p class="cocktail-recipe cocktail-vodka">
+                        &rarr; Garnish: Lime Wedge<br/> &rarr; 2 oz. Cranberry Juice<br/> &rarr; 2 oz. Grapefruit Juice<br/> &rarr; 1.5 oz. Vodka<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Sex on The Beach</h5><img src="imgs/cocktails/glass_tropical.png" alt="sex-on-the-beach">
+                    <p class="cocktail-recipe cocktail-vodka">
+                        &rarr; Garnish: Orange Slice<br/> &rarr; &frac12; oz. Peach Schnapps<br/> &rarr; 1.5 oz. Orange Juice<br/> &rarr; 1.5 oz. Cranberry Juice<br/> &rarr; 1.5 oz. Vodka<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Smith & Wesson</h5><img src="imgs/cocktails/glass_highball.png" alt="smith-&-wesson">
+                    <p class="cocktail-recipe cocktail-vodka">
+                        &rarr; 1 oz. Cream<br/> &rarr; Pepsi or Coca-Cola<br/> &rarr; 1 oz. Coffee Liqueur<br/> &rarr; 1 oz. Vodka<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Vodka Martini</h5><img src="imgs/cocktails/glass_martini.png" alt="vodka-martini">
+                    <p class="cocktail-recipe cocktail-vodka">
+                        &rarr; Garnish: 1 or 3 Olives<br/> &rarr; &frac12; oz. Dry Vermouth<br/> &rarr; 3 oz. Vodka<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>White Russian</h5><img src="imgs/cocktails/glass_rock.png" alt="white-russian">
+                    <p class="cocktail-recipe cocktail-vodka">
+                        &rarr; Garnish: None<br/> &rarr; 2&frasl;3 oz. Coffee Liqueur<br/> &rarr; 1 2&frasl;3 oz. Vodka<br/> &rarr; 1 oz. Fresh Cream<br/>
+                    </p>
+                </li>
+                <span class="arrow-slider" onclick="nextImg(2)">&#8250;</span>
+            </ul>
+        </div>
+
+        <!--Rum-->
+        <div class="cocktail-right">
+            <h3 class="cocktails-title">Rum</h3>
+            <ul class="types-slider"><span class="arrow-slider" onclick="prevImg(3)">&#8249;</span>
+                <li>
+                    <h5>Bacardi</h5><img src="imgs/cocktails/glass_martini.png" alt="bacardi">
+                    <p class="cocktail-recipe cocktail-rum">
+                        &rarr; Garnish: Lime Wedge<br/> &rarr; 2&frasl;3 oz. Lime Juice<br/> &rarr; 1&frasl;3 oz. Grenadine Syrup<br/> &rarr; 1.5 oz. Bacardi White Rum<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Between The Sheets</h5><img src="imgs/cocktails/glass_martini.png" alt="between-the-sheets">
+                    <p class="cocktail-recipe cocktail-rum">
+                        &rarr; Garnish: Lime Wheel<br/> &rarr; 2&frasl;3 oz. Lemon Juice<br/> &rarr; 1 oz. Triple Sec<br/> &rarr; 1 oz. Cognac<br/> &rarr; 1 oz. White Rum<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Cuba Libre</h5><img src="imgs/cocktails/glass_highball.png" alt="cuba-libre">
+                    <p class="cocktail-recipe cocktail-rum">
+                        &rarr; Garnish: Lime Wheel<br/> &rarr; &frac12; oz. Lime Juice<br/> &rarr; 4 oz. Coca-Cola<br/> &rarr; 1.5 oz. White Rum<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Daiquiri</h5><img src="imgs/cocktails/glass_margarita.png" alt="daiquiri">
+                    <p class="cocktail-recipe cocktail-rum">
+                        &rarr; Garnish: Lime Slice<br/> &rarr; 1 oz. Lime Juice<br/> &rarr; &frac12; oz. Simple Syrup<br/> &rarr; 1.5 oz. White Rum<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Hemingway Special</h5><img src="imgs/cocktails/glass_martini.png" alt="hemingway-special">
+                    <p class="cocktail-recipe cocktail-rum">
+                        &rarr; &frac12; oz. Fresh Lime Juice<br/> &rarr; 1 1&frasl;3 oz. Grapefruit Juice<br/> &rarr; &frac12; oz. Maraschino Liqueur<br/> &rarr; 2 oz. White Rum<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Long Island Iced Tea</h5><img src="imgs/cocktails/glass_highball.png" alt="long-island-iced-tea">
+                    <p class="cocktail-recipe cocktail-rum">
+                        &rarr; Garnish: Lemon Wedge<br/> &rarr; 1 oz. Lemon Juice<br/> &rarr; 1 oz. Gomme Syrup<br/> &rarr; &frac12; oz. Triple Sec<br/> &rarr; &frac12; oz. Silver Tequila<br/> &rarr; &frac12; oz. Gin<br/> &rarr; &frac12; oz. White Rum<br/> &rarr; &frac12; oz. Vodka<br/> &rarr; Cola<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Mai-Tai</h5><img src="imgs/cocktails/glass_tropical.png" alt="mai-tai">
+                    <p class="cocktail-recipe cocktail-rum">
+                        &rarr; Garnish: Pineapple Wedge<br/> &rarr; 1&frasl;3 oz. Fresh Lime Juice<br/> &rarr; &frac12; oz. Orange Curaçao<br/> &rarr; &frac12; oz. Orgeat Syrup<br/> &rarr; 1 1&frasl;3 oz. White Rum<br/> &rarr; 2&frasl;3 oz. Dark Rum<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Mojito</h5><img src="imgs/cocktails/glass_highball.png" alt="mojito">
+                    <p class="cocktail-recipe cocktail-rum">
+                        &rarr; Garnish: Mint<br/> &rarr; Mint Leaves<br/> &rarr; 2 tsp. Sugar<br/> &rarr; 1 oz. Lime Juice<br/> &rarr; Soda Water<br/> &rarr; 1.5 oz. White Rum<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Piña Colada</h5><img src="imgs/cocktails/glass_tropical.png" alt="piña-colada">
+                    <p class="cocktail-recipe cocktail-rum">
+                        &rarr; Garnish: Pineapple<br/> &rarr; 1 oz. Coconut Cream<br/> &rarr; 3 oz. Pineapple Juice<br/> &rarr; 1 oz. White Rum<br/>
+                    </p>
+                </li>
+                <span class="arrow-slider" onclick="nextImg(3)">&#8250;</span>
+            </ul>
+        </div>
+
+        <!--Brandy / Cognac-->
+        <div class="cocktail-left">
+            <h3 class="cocktails-title">Brandy</h3>
+            <ul class="types-slider"><span class="arrow-slider" onclick="prevImg(4)">&#8249;</span>
+                <li>
+                    <h5>Between The Sheets</h5><img src="imgs/cocktails/glass_martini.png" alt="between-the-sheets">
+                    <p class="cocktail-recipe cocktail-brandy">
+                        &rarr; Garnish: Lime Wheel<br/> &rarr; 2&frasl;3 oz. Lemon Juice<br/> &rarr; 1 oz. Triple Sec<br/> &rarr; 1 oz. Cognac<br/> &rarr; 1 oz. White Rum<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Brandy Alexander</h5><img src="imgs/cocktails/glass_martini.png" alt="brandy-alexander">
+                    <p class="cocktail-recipe cocktail-brandy">
+                        &rarr; Garnish: Grated Nutmeg<br/> &rarr; 1 oz. Fresh Cream<br/> &rarr; 1 oz. Crème de Cacao<br/> &rarr; 1 oz. Cognac<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Horse's Neck</h5><img src="imgs/cocktails/glass_highball.png" alt="horse's-neck">
+                    <p class="cocktail-recipe cocktail-brandy">
+                        &rarr; Garnish: Lemon Zest Spiral<br/> &rarr; Dash Angostura Bitters<br/> &rarr; 4 oz. Ginger Ale<br/> &rarr; 1 1&frasl;3 oz. Brandy<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Sidecar</h5><img src="imgs/cocktails/glass_martini.png" alt="sidecar">
+                    <p class="cocktail-recipe cocktail-brandy">&rarr; Sugar Coated Rim<br/> &rarr; Garnish: Orange Peel<br/> &rarr; &frac34; oz. Lemon Juice<br/> &rarr; &frac34; oz. Orange Liqueur<br/> &rarr; 2 oz. Cognac<br/>
+                    </p>
+                </li>
+                <span class="arrow-slider" onclick="nextImg(4)">&#8250;</span>
+            </ul>
+        </div>
+
+        <!--Whiskey-->
+        <div class="cocktail-right">
+            <h3 class="cocktails-title">Whisk(e)y</h3>
+            <ul class="types-slider"><span class="arrow-slider" onclick="prevImg(5)">&#8249;</span>
+                <li>
+                    <h5>Irish Buck</h5><img src="imgs/cocktails/glass_highball.png" alt="irish-buck">
+                    <p class="cocktail-recipe cocktail-whiskey">
+                        &rarr; Garnish: Lime Wedge<br/> &rarr; &frac14; oz. Lime Juice<br/> &rarr; Ginger Ale<br/> &rarr; 1.5 oz. Irish Whiskey<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Irish Coffee</h5><img src="imgs/cocktails/glass_irishCoffeeMug.png" alt="irish-coffee">
+                    <p class="cocktail-recipe cocktail-whiskey">
+                        &rarr; Garnish: Whipped Cream<br/> &rarr; 1 tsp. Brown Sugar<br/> &rarr; 1 oz. Fresh Cream<br/> &rarr; 3 oz. Hot Coffee<br/> &rarr; 1.5 oz. Irish Whiskey<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Jack & Coke</h5><img src="imgs/cocktails/glass_highball.png" alt="jack-&-coke">
+                    <p class="cocktail-recipe cocktail-whiskey">
+                        &rarr; Garnish: Lime Wedge<br/> &rarr; Coca-Cola<br/> &rarr; 1 oz. Jack Daniel's Whisky<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>John Collins</h5><img src="imgs/cocktails/glass_highball.png" alt="john-collins">
+                    <p class="cocktail-recipe cocktail-whiskey">
+                        &rarr; Garnish: Cherry<br/>&emsp; & Orange Slice<br/> &rarr; 1 oz. Lemon Juice<br/> &rarr; &frac12; oz. Simple Syrup<br/> &rarr; Club Soda<br/> &rarr; 2 oz. Bourbon Whiskey<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Long Island Iced Tea</h5><img src="imgs/cocktails/glass_highball.png" alt="long-island-iced-tea">
+                    <p class="cocktail-recipe cocktail-whiskey">
+                        &rarr; Garnish: Lemon Wedge<br/> &rarr; 1 oz. Lemon Juice<br/> &rarr; 1 oz. Gomme Syrup<br/> &rarr; &frac12; oz. Triple Sec<br/> &rarr; &frac12; oz. Silver Tequila<br/> &rarr; &frac12; oz. Gin<br/> &rarr; &frac12; oz. White Rum<br/> &rarr; &frac12; oz. Vodka<br/> &rarr; Cola<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Lynchburg Lemonade</h5><img src="imgs/cocktails/glass_highball.png" alt="lynchburg-lemonade">
+                    <p class="cocktail-recipe cocktail-whiskey">
+                        &rarr; Garnish: Cherry<br/>&emsp; & Lemon Wedge<br/> &rarr; 1 oz. Sour Mix<br/> &rarr; 1 oz. Orange Liqueur<br/> &rarr; Lemon-Lime Soda<br/> &rarr; 1.5 oz. Jack Daniel's Whisky<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Manhattan</h5><img src="imgs/cocktails/glass_martini.png" alt="manhattan">
+                    <p class="cocktail-recipe cocktail-whiskey">
+                        &rarr; Garnish: Cherry<br/> &rarr; &frac34; oz. Sweet Vermouth<br/> &rarr; Dash Angostura Bitters<br/> &rarr; 2 oz. Rye Whisky<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Mint Julep</h5><img src="imgs/cocktails/glass_highball.png" alt="mint-julep">
+                    <p class="cocktail-recipe cocktail-whiskey">
+                        &rarr; Garnish: Mint Sprig<br/> &rarr; 4-5 Mint Sprigs<br/> &rarr; &frac12; oz. Simple Syrup<br/> &rarr; 2 oz. Bourbon Whisky<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Old Fashioned</h5><img src="imgs/cocktails/glass_rock.png" alt="old-fashioned">
+                    <p class="cocktail-recipe cocktail-whiskey">
+                        &rarr; Garnish: Cherry<br/>&emsp; & Orange Slice<br/> &rarr; 1 tsp. Sugar<br/> &rarr; 3 Dashes Angostura Bitters<br/> &rarr; Splash of Water<br/> &rarr; 2 oz. Bourbon or Rye<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Rob Roy</h5><img src="imgs/cocktails/glass_martini.png" alt="rob-roy">
+                    <p class="cocktail-recipe cocktail-whiskey">
+                        &rarr; Garnish: Cherry<br/> &rarr; &frac34; oz. Sweet Vermouth<br/> &rarr; Dash Angostura Bitters<br/> &rarr; 2 oz. Scotch Whisky<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Seven & Seven</h5><img src="imgs/cocktails/glass_highball.png" alt="seven-&-seven">
+                    <p class="cocktail-recipe cocktail-whiskey">
+                        &rarr; Garnish: Lemon Wedge<br/> &rarr; 7-Up Soda<br/> &rarr; 1 oz. Seagram's 7 Crown<br/> &emsp; Whiskey<br/>
+                    </p>
+                </li>
+                <span class="arrow-slider" onclick="nextImg(5)">&#8250;</span>
+            </ul>
+        </div>
+
+        <!--EXCLUDED FOR NOW
+<!--Shooter-*->
+<div class="cocktail-left">
+<h3 class="cocktails-title">Shots</h3>
+<ul class="types-slider"><span class="arrow-slider" onclick="prevImg(6)">&#8249;</span>
+<li><h5>Buttery Nipple</h5><img src ="https://d1alt1wkdk73qo.cloudfront.net/images/guide/869dc4c16988471ba92a04683b7acf65/640x960.jpg" alt="buttery-nipple">
+<p class="cocktail-recipe cocktail-shots">
+&rarr; &frac12; oz. Irish Cream<br/>
+&rarr; 1 oz. Butterscotch Schnapps<br/>
+</p>
+</li>
+<span class="arrow-slider" onclick="nextImg(6)">&#8250;</span>
+</ul>
+</div>
+END OF EXCLUDED FOR NOW-->
+
+        <!--Wine-->
+        <div class="cocktail-right">
+            <h3 class="cocktails-title">Wine</h3>
+            <ul class="types-slider"><span class="arrow-slider" onclick="prevImg(6)">&#8249;</span>
+                <li>
+                    <h5>Bellini</h5><img src="imgs/cocktails/glass_wine.png" alt="bellini">
+                    <p class="cocktail-recipe cocktail-wine">
+                        &rarr; 1.5 oz. Fresh Peach Puree<br/> &rarr; 3 oz. Prosecco<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Champagne Cocktail</h5><img src="imgs/cocktails/glass_champagne.png" alt="champagne-cocktail">
+                    <p class="cocktail-recipe cocktail-wine">
+                        &rarr; Garnish: Cherry<br/>&emsp; Orange Slice<br/> &rarr; 2 Dashes Angostura Bitters<br/> &rarr; 1 Sugar Cube<br/> &rarr; 1&frasl;3 oz. Cognac<br/> &rarr; 3 oz. Chilled Champagne<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>French 75</h5><img src="imgs/cocktails/glass_champagne.png" alt="french-75">
+                    <p class="cocktail-recipe cocktail-wine">
+                        &rarr; 2 Dashes Sugar Syrup<br/> &rarr; &frac12; oz. Lemon Juice<br/> &rarr; 1 oz. Gin<br/> &rarr; 2 oz. Champagne<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Kir</h5><img src="imgs/cocktails/glass_wine.png" alt="kir">
+                    <p class="cocktail-recipe cocktail-wine">
+                        &rarr; 1&frasl;3 oz. Crème de Cassis<br/> &rarr; 3 oz. Dry White Wine<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Mimosa</h5><img src="imgs/cocktails/glass_champagne.png" alt="mimosa">
+                    <p class="cocktail-recipe cocktail-wine">
+                        &rarr; 2.5 oz. Orange Juice<br/> &rarr; 2.5 oz. Champagne<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Rose</h5><img src="imgs/cocktails/glass_martini.png" alt="rose">
+                    <p class="cocktail-recipe cocktail-wine">
+                        &rarr; Garnish: Cherry<br/> &rarr; 3 Dashes Strawberry Syrup<br/> &rarr; 2&frasl;3 oz. Kirschwasser<br/> &rarr; 2 1&frasl;3 oz. Dry Vermouth<br/>
+                    </p>
+                </li>
+                <span class="arrow-slider" onclick="nextImg(6)">&#8250;</span>
+            </ul>
+        </div>
+
+        <!--Liqueurs & More-->
+        <div class="cocktail-left">
+            <h3 class="cocktails-title">Liqueur & More</h3>
+            <ul class="types-slider"><span class="arrow-slider" onclick="prevImg(7)">&#8249;</span>
+                <li>
+                    <h5>Amaretto Sour</h5><img src="imgs/cocktails/glass_rock.png" alt="amaretto-sour">
+                    <p class="cocktail-recipe cocktail-liqueurmore">
+                        &rarr; Garnish: Cherry<br/>&emsp; & Orange Slice<br/> &rarr; &frac34; oz. Lemon Juice<br/> &rarr; &frac34; oz. Simple Syrup<br/> &rarr; 1.5 oz. Amaretto<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Americano</h5><img src="imgs/cocktails/glass_rock.png" alt="americano">
+                    <p class="cocktail-recipe cocktail-liqueurmore">
+                        &rarr; Garnish: Lemon Twist or<br/>&emsp; Orange Slice<br/> &rarr; Splash Soda Water<br/> &rarr; 1 oz. Campari<br/> &rarr; 1 oz.Sweet Red Vermouth<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Between The Sheets</h5><img src="imgs/cocktails/glass_martini.png" alt="between-the-sheets">
+                    <p class="cocktail-recipe cocktail-liqueurmore">
+                        &rarr; Garnish: Lime Wheel<br/> &rarr; 2&frasl;3 oz. Lemon Juice<br/> &rarr; 1 oz. Triple Sec<br/> &rarr; 1 oz. Cognac<br/> &rarr; 1 oz. White Rum<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Black & Tan</h5><img src="imgs/cocktails/glass_highball.png" alt="black-&-tan">
+                    <p class="cocktail-recipe cocktail-liqueurmore">
+                        &rarr; 2 oz. Pale Ale Beer<br/> &rarr; 2 oz. Guinness Stout Beer<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Caipirinha</h5><img src="imgs/cocktails/glass_rock.png" alt="caipirinha">
+                    <p class="cocktail-recipe cocktail-liqueurmore">
+                        &rarr; 2 tsp. Sugar<br/> &rarr; 4 Lime Wedges<br/> &rarr; 1.5 oz. Cachaça<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>French Connection</h5><img src="imgs/cocktails/glass_rock.png" alt="french-connection">
+                    <p class="cocktail-recipe cocktail-liqueurmore">
+                        &rarr; 1 1&frasl;6 oz. Cognac<br/> &rarr; 1 1&frasl;6 oz. Amaretto<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>God Father</h5><img src="imgs/cocktails/glass_rock.png" alt="god-father">
+                    <p class="cocktail-recipe cocktail-liqueurmore">
+                        &rarr; 1 1&frasl;6 oz. Scotch<br/> &rarr; 1 1&frasl;6 oz. Amaretto<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>God Mother</h5><img src="imgs/cocktails/glass_rock.png" alt="god-mother">
+                    <p class="cocktail-recipe cocktail-liqueurmore">
+                        &rarr; 1 1&frasl;6 oz. Vodka<br/> &rarr; 1 1&frasl;6 oz. Amaretto<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Golden Dream</h5><img src="imgs/cocktails/glass_martini.png" alt="golden-dream">
+                    <p class="cocktail-recipe cocktail-liqueurmore">
+                        &rarr; 2&frasl;3 oz. Fresh Orange Juice<br/> &rarr; 1&frasl;3 oz. Fresh Cream<br/> &rarr; 2&frasl;3 oz. Galliano<br/> &rarr; 2&frasl;3 oz. Triple Sec<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Grasshopper</h5><img src="imgs/cocktails/glass_martini.png" alt="grasshopper">
+                    <p class="cocktail-recipe cocktail-liqueurmore">
+                        &rarr; Garnish: Grated Nutmeg<br/> &rarr; 1 oz. Crème de Cacao<br/> &rarr; 1 oz. Crème de Menthe<br/> &rarr; 1 oz. Fresh Cream<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Long Island Iced Tea</h5><img src="imgs/cocktails/glass_highball.png" alt="long-island-iced-tea">
+                    <p class="cocktail-recipe cocktail-liqueurmore">
+                        &rarr; Garnish: Lemon Wedge<br/> &rarr; 1 oz. Lemon Juice<br/> &rarr; 1 oz. Gomme Syrup<br/> &rarr; &frac12; oz. Triple Sec<br/> &rarr; &frac12; oz. Silver Tequila<br/> &rarr; &frac12; oz. Gin<br/> &rarr; &frac12; oz. White Rum<br/> &rarr; &frac12; oz. Vodka<br/> &rarr; Cola<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Pimm's Cup</h5><img src="imgs/cocktails/glass_highball.png" alt="pimm's-cup">
+                    <p class="cocktail-recipe cocktail-liqueurmore">
+                        &rarr; 1 Lemon Slice<br/> &rarr; &frac12; Orange Slice<br/> &rarr; 1 Strawberry, 4 Cuts<br/> &rarr; 1 or 2 Cucumber slices<br/> &rarr; 6 Mint Leaves<br/> &rarr; 3 oz. 7-Up<br/> &rarr; 2 oz. Pimm's No. 1<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Smith & Kearns</h5><img src="imgs/cocktails/glass_highball.png" alt="smith-&-kearns">
+                    <p class="cocktail-recipe cocktail-liqueurmore">
+                        &rarr; 2 oz. Cream<br/> &rarr; Club Soda<br/> &rarr; 2 oz. Coffee Liqueur<br/>
+                    </p>
+                </li>
+                <span class="arrow-slider" onclick="nextImg(7)">&#8250;</span>
+            </ul>
+        </div>
+
+        <!--Non-Alcoholic-->
+        <div class="cocktail-left">
+            <h3 class="cocktails-title">Non-Alcoholic</h3>
+            <ul class="types-slider"><span class="arrow-slider" onclick="prevImg(8)">&#8249;</span>
+                <li>
+                    <h5>Arnold Palmer</h5><img src="imgs/cocktails/glass_highball.png" alt="arnold-palmer">
+                    <p class="cocktail-recipe cocktail-nonalcoholic">
+                        &rarr; Garnish: Lemon Wedge<br/> &rarr; 3 oz. Iced Tea<br/> &rarr; 1.5 oz. Lemon Juice<br/> &rarr; 1.5 oz. Simple Syrup<br/>
+                    </p>
+                </li>
+                <li>
+                    <h5>Shirley Temple</h5><img src="imgs/cocktails/glass_highball.png" alt="shirley-temple">
+                    <p class="cocktail-recipe cocktail-nonalcoholic">
+                        &rarr; Garnish: Cherry<br/> &rarr; Ginger ale<br/> &rarr; Splash of Grenadine<br/>
+                    </p>
+                </li>
+                <span class="arrow-slider" onclick="nextImg(8)">&#8250;</span>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="container-black">
+        <div onclick="scrollToTop()" title="Back to top" id="topbtn">&#xFE3F;</div>
+        <ul>
+            <h6>SITE MAP</h6>
+            <li><a href="index.html">Home - Spirits</a></li>
+            <li><a href="cocktails.html">Cocktails</a></li>
+
+            <li><a href="terminology.html">Terminology</a></li>
+            <li><a href="brands.html">Popular Brands</a></li>
+            <li><a href="beers.html">Beers</a></li>
+            <li><a href="wine.html">Wine</a></li>
+        </ul>
+        <ul>
+            <h6>ABOUT</h6>
+            <li>Creator: &nbsp;<a href="http://www.gomezsantiago.com" target="_blank">Santiago Gomez</a>
+            </li>
+        </ul>
+        <ul>
+            <h6>CONTACT</h6>
+            <li><a class="fa fa-linkedin-square" href="https://www.linkedin.com/in/santiago-gomez-13b4a9115/" target="_blank"></a>
+            </li>
+        </ul>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

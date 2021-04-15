@@ -1,0 +1,111 @@
+<!--This is a sample Bartending Website-->
+<!--the max width size can be 1320px (that is what it is for youtube)-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Santiago Gomez">
+    <title>How 2 Bar - Wine</title>
+    <meta name="description" content="Wine is an alcoholic beverage made from the fermented juice of grapes. Most wines can be organized into five fundamental groups despite the fact that there are many types.">
+    <meta name="keywords" content="white wine, red wine, sparkling wine, rosé wine, fortified wine, what is wine, types of wine, wine grape, how2bar, santiago gomez,">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <img class="fixbackground" src="./imgs/bartender_multiple.png">
+    <div id="menu-icon" onclick="openNav()">
+        <div class="menu-iconElement"></div>
+        <div class="menu-iconElement"></div>
+        <div class="menu-iconElement"></div>
+    </div>
+
+    <a href="javascript:void(0)" id="close-btn" onclick="closeNav()">&times;</a>
+
+    <nav id="Menu">
+        <ul>
+            <a href="index.html">
+                <li>Home - Spirits</li>
+            </a>
+            <a href="cocktails.html">
+                <li>Cocktails</li>
+            </a>
+
+            <a href="terminology.html">
+                <li>Terminology</li>
+            </a>
+            <a href="brands.html">
+                <li>Popular Brands</li>
+            </a>
+            <a href="beers.html">
+                <li>Beers</li>
+            </a>
+            <a href="wine.html">
+                <li class="current">Wine</li>
+            </a>
+        </ul>
+    </nav>
+
+    <article class="container-white">
+        <h2 class="emphasis">Wine</h2>
+        <section class="indent">
+            <p>Wine is an alcoholic beverage made from the fermented juice of grapes. &nbsp;The grapes used for wine making are appropriately named wine grapes which are smaller and sweeter and have thicker skin than regular table grapes. &nbsp;Since the type of grape used determines the type of wine, many wines are named after the grapes from which they're produced. &nbsp;There are many types of wine, however most can be organized into <a target="_blank" href="http://winefolly.com/review/different-types-of-wine/"><i>five fundamental groups</i></a>, according to winefolly.com. &nbsp;The five wine groups are as follows:
+            </p>
+            <ul class="list-name-info" id="nameInfo-wine">
+                <li><span class="emphasis">Red Wine</span></li>
+                <li>A still wine made with dark-colored (black) grapes. &nbsp;The color of the wine can range from intense violet to brick red and brown and range in sweetness from bone-dry to sweet.
+                </li>
+                <li><span class="emphasis">White Wine</span></li>
+                <li>A still wine produced mainly from white grapes, which have green or yellow skin, but also sometimes from black grapes like pinot noir, which is commonly used in the production of champagne. &nbsp;White wine's color is yellowish, as in yellow-green or yellow-gold, and its flavors span from rich and creamy to light and zesty.
+                </li>
+                <li><span class="emphasis">Rosé Wine</span></li>
+                <li>A type of wine that can be still, semi-sparkling, or sparkling and that gets its color from black grape skins, which are removed during production before deeply coloring the wine. &nbsp;Rosé can be produced using three methods, namely skin contact, saignée, and by blending red and white wine together. &nbsp;Both dry and sweet styles of rosé are common.
+                </li>
+                <li><span class="emphasis">Sparkling Wine</span></li>
+                <li>A style of winemaking involving a secondary fermetation that gives a wine significant levels of carbon dioxide, thus making it fizzy. &nbsp;Sparkling wine can be red, white, or rosé and can range in sweetness from extra-brut, driest kind of sparkling wine, to a rich and sweet sparkling wine.
+                </li>
+                <li><span class="emphasis">Fortified Wine</span></li>
+                <li>A style of winemaking that involves adding a distilled liquor, usually brandy, to wine. &nbsp;There are many styles of fortified wine such as Port, Sherry, and Vermouth, to name a few.
+                </li>
+            </ul>
+            <p>
+            </p>
+        </section>
+    </article>
+
+    <footer class="container-black">
+        <div onclick="scrollToTop()" title="Back to top" id="topbtn">&#xFE3F;</div>
+        <ul>
+            <h6>SITE MAP</h6>
+            <li><a href="index.html">Home - Spirits</a></li>
+            <li><a href="cocktails.html">Cocktails</a></li>
+
+            <li><a href="terminology.html">Terminology</a></li>
+            <li><a href="brands.html">Popular Brands</a></li>
+            <li><a href="beers.html">Beers</a></li>
+            <li><a href="wine.html">Wine</a></li>
+        </ul>
+        <ul>
+            <h6>ABOUT</h6>
+            <li>Creator: &nbsp;<a href="http://www.gomezsantiago.com" target="_blank">Santiago Gomez</a>
+            </li>
+        </ul>
+        <ul>
+            <h6>CONTACT</h6>
+            <li><a class="fa fa-linkedin-square" href="https://www.linkedin.com/in/santiago-gomez-13b4a9115/" target="_blank"></a>
+            </li>
+        </ul>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
